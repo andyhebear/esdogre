@@ -1,0 +1,85 @@
+
+
+material _Chipboa
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.662745 0.6 0.443137 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_Pure_FP
+			{
+				param_named ambientColor float4 0.662745 0.6 0.443137 1
+				param_named diffuseColor float4 0.662745 0.6 0.443137 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+		}
+
+	}
+
+}
+
+material _Green_
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0 0.639216 0 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_Pure_FP
+			{
+				param_named ambientColor float4 0 0.639216 0 1
+				param_named diffuseColor float4 0 0.639216 0 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+		}
+
+	}
+
+}
+
+material _Lime_
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.282353 1 0.101961 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_Pure_FP
+			{
+				param_named ambientColor float4 0.282353 1 0.101961 1
+				param_named diffuseColor float4 0.282353 1 0.101961 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+		}
+
+	}
+
+}

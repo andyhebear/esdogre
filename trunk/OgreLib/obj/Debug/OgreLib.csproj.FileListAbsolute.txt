@@ -1,0 +1,7 @@
+F:\newogre\Esd\OgreLib\obj\Debug\ResolveAssemblyReference.cache
+F:\newogre\Esd\OgreLib\bin\Debug\OgreLib.dll
+F:\newogre\Esd\OgreLib\bin\Debug\OgreLib.pdb
+F:\newogre\Esd\OgreLib\obj\Debug\OgreLib.dll
+F:\newogre\Esd\OgreLib\obj\Debug\OgreLib.pdb
+F:\newogre\Esd\bin\OgreLib.dll
+F:\newogre\Esd\bin\OgreLib.pdb
