@@ -5,3 +5,13 @@ F:\newogre\Esd\OgreLib\obj\Debug\OgreLib.dll
 F:\newogre\Esd\OgreLib\obj\Debug\OgreLib.pdb
 F:\newogre\Esd\bin\OgreLib.dll
 F:\newogre\Esd\bin\OgreLib.pdb
+F:\dotnet程序\Esd\新建文件夹\bin\OgreLib.dll
+F:\dotnet程序\Esd\新建文件夹\bin\OgreLib.pdb
+F:\dotnet程序\Esd\新建文件夹\OgreLib\obj\Debug\ResolveAssemblyReference.cache
+F:\dotnet程序\Esd\新建文件夹\OgreLib\obj\Debug\OgreLib.dll
+F:\dotnet程序\Esd\新建文件夹\OgreLib\obj\Debug\OgreLib.pdb
+F:\dotnet proj\Esd\temp\bin\OgreLib.dll
+F:\dotnet proj\Esd\temp\bin\OgreLib.pdb
+F:\dotnet proj\Esd\temp\OgreLib\obj\Debug\ResolveAssemblyReference.cache
+F:\dotnet proj\Esd\temp\OgreLib\obj\Debug\OgreLib.dll
+F:\dotnet proj\Esd\temp\OgreLib\obj\Debug\OgreLib.pdb

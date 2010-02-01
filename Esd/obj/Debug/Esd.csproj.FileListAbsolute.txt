@@ -14,3 +14,31 @@ F:\newogre\Esd\bin\Esd.exe
 F:\newogre\Esd\bin\Esd.pdb
 F:\newogre\Esd\Esd\obj\Debug\窗体\NewScene.baml
 F:\newogre\Esd\Esd\obj\Debug\窗体\NewScene.g.cs
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\Esd.exe
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\Esd.pdb
+F:\dotnet程序\Esd\新建文件夹\bin\Esd.exe
+F:\dotnet程序\Esd\新建文件夹\bin\Esd.pdb
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\ResolveAssemblyReference.cache
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\Window1.baml
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\窗体\NewScene.baml
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\Window1.g.cs
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\窗体\NewScene.g.cs
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\App.g.cs
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\Esd_MarkupCompile.cache
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\Esd.g.resources
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\Esd.Properties.Resources.resources
+F:\dotnet程序\Esd\新建文件夹\Esd\obj\Debug\Esd.csproj.GenerateResource.Cache
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\Esd.exe
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\Esd.pdb
+F:\dotnet proj\Esd\temp\bin\Esd.exe
+F:\dotnet proj\Esd\temp\bin\Esd.pdb
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\ResolveAssemblyReference.cache
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\Window1.baml
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\窗体\NewScene.baml
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\Window1.g.cs
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\窗体\NewScene.g.cs
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\App.g.cs
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\Esd_MarkupCompile.cache
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\Esd.g.resources
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\Esd.Properties.Resources.resources
+F:\dotnet proj\Esd\temp\Esd\obj\Debug\Esd.csproj.GenerateResource.Cache

@@ -82,6 +82,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EsdSceneManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -95,6 +96,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="工具\NewSceneTool.cs" />
     <Compile Include="窗体\NewScene.xaml.cs">
       <DependentUpon>NewScene.xaml</DependentUpon>
     </Compile>
@@ -109,6 +111,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EsdCommon\EsdCommon.csproj">
+      <Project>{C0932A83-9DB5-4E89-875A-31514A173672}</Project>
+      <Name>EsdCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OgreLib\OgreLib.csproj">
       <Project>{DBA07D28-3FDF-4F64-9CED-571FA86A8296}</Project>
       <Name>OgreLib</Name>
