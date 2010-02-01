@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using Mogre;
 using System.ComponentModel;
 using System.Windows.Media.Animation;
+using Esd.Tool;
 
 namespace Esd
 {
@@ -56,6 +57,7 @@ namespace Esd
 
             // Create a skydome
             sceneMgr.SetSkyDome(true, "SkyMat", -5, 2);
+            EsdSceneManager.CreateSceneManager(_ogreImage);
         }
         private void RenterTargetControl_SizeChanged(object sender, SizeChangedEventArgs e)
         {
@@ -87,8 +89,9 @@ namespace Esd
 
         private void NewScene_Click(object sender, RoutedEventArgs e)
         {
-            NewSceneWindow win = new NewSceneWindow();
-            win.ShowDialog();
+            NewSceneTool tool = new NewSceneTool();
+            tool.Click();
+           
         }
     }
 }

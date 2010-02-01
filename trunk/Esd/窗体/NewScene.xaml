@@ -1,12 +1,24 @@
 ﻿<Window x:Class="Esd.NewSceneWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="新建场景" Height="403" Width="423" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    Title="新建场景" Height="383" Width="420" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid >
-        <GroupBox Header="场景属性" Margin="12,12,12,82" Name="groupBox1">
-            <Grid />
+        <GroupBox Header="场景属性" Margin="12,12,12,56" Name="groupBox1">
+            <Grid>
+                <Label Margin="6,6,0,220.163" Name="label1" HorizontalAlignment="Left" Width="78">宽度：</Label>
+                <Label Height="28" Margin="6,40,0,0" Name="label2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="78">长度：</Label>
+                <TextBox Height="23" Margin="90,11,6,0" Name="textBox1" VerticalAlignment="Top"  >
+                200
+                </TextBox>
+                <TextBox Height="23" Margin="90,40,6,0" Name="textBox2" VerticalAlignment="Top" >
+                    200
+                </TextBox>
+                <ListView Margin="6,74,0,6" Name="listView1" HorizontalAlignment="Left" Width="111" SelectionChanged="listView1_SelectionChanged">                   
+                </ListView>
+                <Image Margin="123,74,6,6" Name="image1" Stretch="Fill" />
+            </Grid>
         </GroupBox>
-        <Button Height="23" Margin="0,0,111,35" Name="button1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75">确定</Button>
-        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,18,35" Name="button2" VerticalAlignment="Bottom" Width="75">取消</Button>
+        <Button Height="23" Margin="213,0,0,12" Name="button1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75" Click="button1_Click">确定</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,18,12" Name="button2" VerticalAlignment="Bottom" Width="75" Click="button2_Click">取消</Button>      
     </Grid>
 </Window>
