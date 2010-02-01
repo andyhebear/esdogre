@@ -1,0 +1,2 @@
+D:\OgreApplication\MyOgre\编辑\MyOgre\obj\Debug\MyOgre.exe
+D:\OgreApplication\MyOgre\编辑\MyOgre\obj\Debug\MyOgre.pdb

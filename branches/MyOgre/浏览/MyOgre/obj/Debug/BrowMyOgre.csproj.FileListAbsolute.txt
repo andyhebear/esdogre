@@ -1,0 +1,15 @@
+D:\OgreApplication\MyOgre\浏览\MyOgre\bin\Debug\MyOgre.exe
+D:\OgreApplication\MyOgre\浏览\MyOgre\bin\Debug\MyOgre.pdb
+D:\OgreApplication\MyOgre\浏览\MyOgre\obj\Debug\ResolveAssemblyReference.cache
+D:\OgreApplication\MyOgre\浏览\MyOgre\obj\Debug\MyOgre.AboutBox1.resources
+D:\OgreApplication\MyOgre\浏览\MyOgre\obj\Debug\MyOgre.AddbillBoard.resources
+D:\OgreApplication\MyOgre\浏览\MyOgre\obj\Debug\MyOgre.ImportModelForm.resources
+D:\OgreApplication\MyOgre\浏览\MyOgre\obj\Debug\MyOgre.MainOgreForm.resources
+D:\OgreApplication\MyOgre\浏览\MyOgre\obj\Debug\MyOgre.NewSceneForm.resources
+D:\OgreApplication\MyOgre\浏览\MyOgre\obj\Debug\MyOgre.Properties.Resources.resources
+D:\OgreApplication\MyOgre\浏览\MyOgre\obj\Debug\BrowMyOgre.csproj.GenerateResource.Cache
+D:\OgreApplication\MyOgre\浏览\MyOgre\obj\Debug\MyOgre.exe
+D:\OgreApplication\MyOgre\浏览\MyOgre\obj\Debug\MyOgre.pdb
+E:\Program\MyOgre\浏览\MyOgre\obj\Debug\Interop.WMPLib.dll
+E:\Program\MyOgre\浏览\MyOgre\obj\Debug\AxInterop.WMPLib.dll
+E:\Program\MyOgre\浏览\MyOgre\obj\Debug\BrowMyOgre.csproj.ResolveComReference.cache

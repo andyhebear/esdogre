@@ -1,0 +1,238 @@
+
+material shiyan01
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.552941 0.584314 0.607843 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.552941 0.584314 0.607843 1
+				param_named diffuseColor float4 0.552941 0.584314 0.607843 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture shiyan01.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material shiyan02
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.580392 0.521569 0.384314 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.580392 0.521569 0.384314 1
+				param_named diffuseColor float4 0.580392 0.521569 0.384314 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture shiyan02.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material shiyan03
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.541176 0.521569 0.458824 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.541176 0.521569 0.458824 1
+				param_named diffuseColor float4 0.541176 0.521569 0.458824 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture shiyan03.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material shiyan04
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.427451 0.462745 0.494118 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.427451 0.462745 0.494118 1
+				param_named diffuseColor float4 0.427451 0.462745 0.494118 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture shiyan04.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material shiyan05
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.862745 0.882353 0.764706 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.862745 0.882353 0.764706 1
+				param_named diffuseColor float4 0.862745 0.882353 0.764706 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture shiyan05.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material shiyan06
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.862745 0.882353 0.764706 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.862745 0.882353 0.764706 1
+				param_named diffuseColor float4 0.862745 0.882353 0.764706 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture shiyan06.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material shiyanlo
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.701961 0.698039 0.709804 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.701961 0.698039 0.709804 1
+				param_named diffuseColor float4 0.701961 0.698039 0.709804 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture shiyanlo.jpg -1
+			}
+		}
+
+	}
+
+}

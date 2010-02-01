@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7E3DCB6-6C73-40CA-A282-542107A3F803}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyOgre</RootNamespace>
+    <AssemblyName>编辑器</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>editor.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mogre, Version=1.4.8.0, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="窗体\RoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\RoadForm.Designer.cs">
+      <DependentUpon>RoadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SetRoadNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SetRoadNameForm.Designer.cs">
+      <DependentUpon>SetRoadNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\SetRoadStyleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\SetRoadStyleForm.Designer.cs">
+      <DependentUpon>SetRoadStyleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\AddbillBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\AddbillBoard.Designer.cs">
+      <DependentUpon>AddbillBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\AddGrassTool.cs" />
+    <Compile Include="窗体\AddModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\AddModelForm.Designer.cs">
+      <DependentUpon>AddModelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\BackgroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\BackgroupForm.Designer.cs">
+      <DependentUpon>BackgroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrawLine3DClass.cs" />
+    <Compile Include="窗体\ImportModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\ImportModelForm.Designer.cs">
+      <DependentUpon>ImportModelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelDataMaintenance.cs" />
+    <Compile Include="ModelEntryStruct.cs" />
+    <Compile Include="窗体\NewSceneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\NewSceneForm.Designer.cs">
+      <DependentUpon>NewSceneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\AddBillBoardTool.cs" />
+    <Compile Include="工具\AddModelTool.cs" />
+    <Compile Include="工具\AddRoadTool.cs" />
+    <Compile Include="工具\AddWaterTool.cs" />
+    <Compile Include="工具\BackgroupManageClass.cs" />
+    <Compile Include="窗体\DeleteModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\DeleteModelForm.Designer.cs">
+      <DependentUpon>DeleteModelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\DeleteModelClass.cs" />
+    <Compile Include="工具\ImportModelTool.cs" />
+    <Compile Include="工具\ITool.cs" />
+    <Compile Include="窗体\MainOgreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体\MainOgreForm.Designer.cs">
+      <DependentUpon>MainOgreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgreView.cs" />
+    <Compile Include="工具\OpenScene.cs" />
+    <Compile Include="工具\PanTool.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="窗体\RoadForm.resx">
+      <DependentUpon>RoadForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SetRoadNameForm.resx">
+      <DependentUpon>SetRoadNameForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\SetRoadStyleForm.resx">
+      <DependentUpon>SetRoadStyleForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\AddbillBoard.resx">
+      <DependentUpon>AddbillBoard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\AddModelForm.resx">
+      <DependentUpon>AddModelForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\BackgroupForm.resx">
+      <DependentUpon>BackgroupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\ImportModelForm.resx">
+      <DependentUpon>ImportModelForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\MainOgreForm.resx">
+      <DependentUpon>MainOgreForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\NewSceneForm.resx">
+      <DependentUpon>NewSceneForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体\DeleteModelForm.resx">
+      <DependentUpon>DeleteModelForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="工具\NewScene.cs" />
+    <Compile Include="工具\SaveScene.cs" />
+    <Compile Include="工具\SelectBillBoardTool.cs" />
+    <Compile Include="工具\SelectModelTool.cs" />
+    <Compile Include="工具\ToolManage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="editor.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

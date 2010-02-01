@@ -1,0 +1,84 @@
+
+material DimGray
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.411765 0.411765 0.411765 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_Pure_FP
+			{
+				param_named ambientColor float4 0.411765 0.411765 0.411765 1
+				param_named diffuseColor float4 0.411765 0.411765 0.411765 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+		}
+
+	}
+
+}
+
+material LightSla
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.466667 0.533333 0.6 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_Pure_FP
+			{
+				param_named ambientColor float4 0.466667 0.533333 0.6 1
+				param_named diffuseColor float4 0.466667 0.533333 0.6 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+		}
+
+	}
+
+}
+
+material Peru
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.803922 0.521569 0.247059 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_Pure_FP
+			{
+				param_named ambientColor float4 0.803922 0.521569 0.247059 1
+				param_named diffuseColor float4 0.803922 0.521569 0.247059 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+		}
+
+	}
+
+}

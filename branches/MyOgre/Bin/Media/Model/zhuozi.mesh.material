@@ -1,0 +1,96 @@
+
+material Grass
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.360784 0.415686 0.219608 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.360784 0.415686 0.219608 1
+				param_named diffuseColor float4 0.360784 0.415686 0.219608 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture Grass.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material Orange
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 1 0.647059 0 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_Pure_FP
+			{
+				param_named ambientColor float4 1 0.647059 0 1
+				param_named diffuseColor float4 1 0.647059 0 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+		}
+
+	}
+
+}
+
+material Wood_che
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.596078 0.337255 0.168627 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+			cull_hardware none
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.596078 0.337255 0.168627 1
+				param_named diffuseColor float4 0.596078 0.337255 0.168627 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture Wood_che.jpg -1
+			}
+		}
+
+	}
+
+}
