@@ -1,0 +1,33 @@
+
+material qianz
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.494118 0.509804 0.545098 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.494118 0.509804 0.545098 1
+				param_named diffuseColor float4 0.494118 0.509804 0.545098 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture qianz.jpg -1
+			}
+		}
+
+	}
+
+}

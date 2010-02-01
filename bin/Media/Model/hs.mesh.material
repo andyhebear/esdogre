@@ -1,0 +1,661 @@
+
+
+material hs_10
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.647059 0.623529 0.588235 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.647059 0.623529 0.588235 1
+				param_named diffuseColor float4 0.647059 0.623529 0.588235 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_10.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_1001
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.647059 0.623529 0.588235 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.647059 0.623529 0.588235 1
+				param_named diffuseColor float4 0.647059 0.623529 0.588235 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_1001.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_1002
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.647059 0.623529 0.588235 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.647059 0.623529 0.588235 1
+				param_named diffuseColor float4 0.647059 0.623529 0.588235 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_1002.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_1003
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.647059 0.623529 0.588235 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.647059 0.623529 0.588235 1
+				param_named diffuseColor float4 0.647059 0.623529 0.588235 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_1003.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_12
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.556863 0.541176 0.513726 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.556863 0.541176 0.513726 1
+				param_named diffuseColor float4 0.556863 0.541176 0.513726 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_12.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_13
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.662745 0.631373 0.596078 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.662745 0.631373 0.596078 1
+				param_named diffuseColor float4 0.662745 0.631373 0.596078 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_13.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_1301
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.662745 0.631373 0.596078 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.662745 0.631373 0.596078 1
+				param_named diffuseColor float4 0.662745 0.631373 0.596078 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_1301.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_14
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.419608 0.435294 0.423529 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.419608 0.435294 0.423529 1
+				param_named diffuseColor float4 0.419608 0.435294 0.423529 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_14.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_15
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.670588 0.666667 0.643137 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.670588 0.666667 0.643137 1
+				param_named diffuseColor float4 0.670588 0.666667 0.643137 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_15.png -1
+			}
+		}
+
+	}
+
+}
+
+material hs_16
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.239216 0.254902 0.25098 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.239216 0.254902 0.25098 1
+				param_named diffuseColor float4 0.239216 0.254902 0.25098 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_16.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_17
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.780392 0.737255 0.682353 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.780392 0.737255 0.682353 1
+				param_named diffuseColor float4 0.780392 0.737255 0.682353 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_17.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_18
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.505882 0.521569 0.470588 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.505882 0.521569 0.470588 1
+				param_named diffuseColor float4 0.505882 0.521569 0.470588 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_18.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_19
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.470588 0.486275 0.470588 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.470588 0.486275 0.470588 1
+				param_named diffuseColor float4 0.470588 0.486275 0.470588 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_19.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_20
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.521569 0.517647 0.498039 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.521569 0.517647 0.498039 1
+				param_named diffuseColor float4 0.521569 0.517647 0.498039 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_20.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_3
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.619608 0.329412 0.243137 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.619608 0.329412 0.243137 1
+				param_named diffuseColor float4 0.619608 0.329412 0.243137 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_3.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_4
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.517647 0.509804 0.486275 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.517647 0.509804 0.486275 1
+				param_named diffuseColor float4 0.517647 0.509804 0.486275 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_4.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_5
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.878431 0.866667 0.792157 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.878431 0.866667 0.792157 1
+				param_named diffuseColor float4 0.878431 0.866667 0.792157 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_5.JPG -1
+			}
+		}
+
+	}
+
+}
+
+material hs_6
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.521569 0.529412 0.517647 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.521569 0.529412 0.517647 1
+				param_named diffuseColor float4 0.521569 0.529412 0.517647 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_6.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_8
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.345098 0.352941 0.345098 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.345098 0.352941 0.345098 1
+				param_named diffuseColor float4 0.345098 0.352941 0.345098 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_8.jpg -1
+			}
+		}
+
+	}
+
+}
+
+material hs_9
+{
+	technique Default
+	{
+		pass Main
+		{
+			ambient 0.639216 0.619608 0.580392 1
+			specular 0.329412 0.329412 0.329412 1 0.01
+
+			vertex_program_ref BlinnVP
+			{
+			}
+
+			fragment_program_ref Blinn_DiffuseMap_FP
+			{
+				param_named ambientColor float4 0.639216 0.619608 0.580392 1
+				param_named diffuseColor float4 0.639216 0.619608 0.580392 1
+				param_named glossLevel float4 0 0 0 0
+				param_named specularColor float4 0.329412 0.329412 0.329412 1
+				param_named specularLevel float4 0 0 0 0
+			}
+
+			texture_unit
+			{
+				texture_alias diffuse
+				texture hs_9.jpg -1
+			}
+		}
+
+	}
+
+}
