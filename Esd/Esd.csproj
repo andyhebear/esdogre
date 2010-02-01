@@ -97,6 +97,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="工具\NewSceneTool.cs" />
+    <Compile Include="工具\ViewportTool.cs" />
     <Compile Include="窗体\NewScene.xaml.cs">
       <DependentUpon>NewScene.xaml</DependentUpon>
     </Compile>

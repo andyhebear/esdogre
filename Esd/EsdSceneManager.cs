@@ -24,8 +24,11 @@ namespace Esd
 
         public SceneManager SceneManager
         {
-            get;
-            set;
+            get
+            {
+                return OgreImage.SceneManager;
+            }
+       
         }
         //模型的管理（保存和读取）
         public ModelDataMaintenance ModelDataManage
@@ -52,10 +55,15 @@ namespace Esd
             get;
             set;
         }
+        public OgreImage OgreImage
+        {
+            get;
+            set;
+        }
         public static void CreateSceneManager(OgreImage ogreimg)
         {
             singleton = new EsdSceneManager();
-            singleton.SceneManager = ogreimg.SceneManager;
+            singleton.OgreImage = ogreimg;
             singleton.ModelDataManage = new ModelDataMaintenance();
         }
 

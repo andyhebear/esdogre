@@ -23,7 +23,10 @@ namespace Esd
     /// </summary>
     public partial class Window1 : Window
     {
-       
+        /// <summary>
+        /// 场景视图变换工具
+        /// </summary>
+        ViewportTool viewporttool = new ViewportTool();
         public Window1()
         {
             InitializeComponent();
@@ -67,7 +70,8 @@ namespace Esd
         }
         void _image_PreRender(object sender, System.EventArgs e)
         {
-           
+            //更新场景视图
+            viewporttool.UpdateViewport();
         }
         private void Window1_OnLoaded(object sender, RoutedEventArgs e)
         {
@@ -77,6 +81,7 @@ namespace Esd
         private void Window1_OnClosing(object sender, CancelEventArgs e)
         {
             RenterTargetControl.Source = null;
+            EsdSceneManager.Singleton.MaterialPtr = null;
             _ogreImage.Dispose();
         }
 
@@ -92,6 +97,21 @@ namespace Esd
             NewSceneTool tool = new NewSceneTool();
             tool.Click();
            
+        }
+
+        private void Viewport_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Viewport_MouseLeave(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Viewport_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }
