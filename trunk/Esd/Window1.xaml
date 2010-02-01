@@ -50,16 +50,16 @@
         </Border>
         <Border Height="42" Background="SkyBlue"  BorderThickness="1" DockPanel.Dock="Top">            
             <ToolBar>
-                <Button Name="Button1"  Width="36" Height="34" >
+                <Button Name="Button1"  Width="36" Height="34" MouseDown="Viewport_MouseDown"  MouseLeave="Viewport_MouseLeave" MouseUp="Viewport_MouseUp">
                     <Image  Source="/Esd;component/ico/tianxia_toolStripButton.Image.png"></Image>
                 </Button>
-                <Button Name="Button2"  Width="36" Height="34" >
+                <Button Name="Button2"  Width="36" Height="34" MouseDown="Viewport_MouseDown"  MouseLeave="Viewport_MouseLeave" MouseUp="Viewport_MouseUp">
                     <Image  Source="/Esd;component/ico/shanglai_toolStripButton.Image.png"></Image>
                 </Button>
-                <Button Name="Button3"  Width="36" Height="34" >
+                <Button Name="Button3"  Width="36" Height="34" MouseDown="Viewport_MouseDown"  MouseLeave="Viewport_MouseLeave" MouseUp="Viewport_MouseUp">
                     <Image  Source="/Esd;component/ico/zuozuan_toolStripButton.Image.png"></Image>
                 </Button>
-                <Button Name="Button4"  Width="36" Height="34" >
+                <Button Name="Button4"  Width="36" Height="34" MouseDown="Viewport_MouseDown"  MouseLeave="Viewport_MouseLeave" MouseUp="Viewport_MouseUp">
                     <Image  Source="/Esd;component/ico/youzuan_toolStripButton.Image.png"></Image>
                 </Button>
                 <Button Name="Button5"  Width="36" Height="34" >
