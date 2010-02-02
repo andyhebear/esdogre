@@ -69,7 +69,9 @@ namespace Esd
 
             // Create a skydome
             sceneMgr.SetSkyDome(true, "SkyMat", -5, 2);
-            EsdSceneManager.CreateSceneManager(_ogreImage);
+            //当窗口改变大小时。会重表创建渲染窗口，这时，场景管理器中的所有结点会被销毁，所以这需重新创建。
+            EsdSceneManager.Singleton.MainNode = sceneMgr.RootSceneNode.CreateChildSceneNode("ogreNode");
+            EsdSceneManager.Singleton.AddmodelNode = sceneMgr.RootSceneNode.CreateChildSceneNode();
             inittool();
         }
         private void RenterTargetControl_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -82,6 +84,13 @@ namespace Esd
         {
             //更新场景视图
             viewporttool.UpdateViewport();
+            if (ToolManage.Singleton.ToolType != typeof(AddModelTool))
+            {
+
+                if (EsdSceneManager.Singleton.AddmodelNode == null)
+                    return;
+                EsdSceneManager.Singleton.AddmodelNode.Position = new Vector3(1000000, 100000, 100000);
+            }
         }
         /// <summary>
         /// 初始或啊工具
@@ -90,12 +99,23 @@ namespace Esd
         {
             //漫游工具
             ToolManage.Singleton.AddTool(new PanToolClass());
+            ToolManage.Singleton.AddTool(new AddModelTool());
+            SelectModelTool smt = new SelectModelTool();
+            smt.SetModifyTextEd = SetModifyTextEd;
+            ToolManage.Singleton.AddTool(smt);
             //设置当前工具为漫游
             ToolManage.Singleton.ToolType = typeof(PanToolClass);
+        }
+        public void SetModifyTextEd(bool flag, SceneNode node)
+        {
+
         }
         private void Window1_OnLoaded(object sender, RoutedEventArgs e)
         {
             _ogreImage.InitOgreAsync();
+            EsdSceneManager.CreateSceneManager(_ogreImage);
+            OpenModelGroup();
+            LoadAllModel();
             LoadModelFiles();
             //向工具管理器增加工具
 
@@ -206,10 +226,7 @@ namespace Esd
                 ModelFolderFiles.Add(name);
             }
         }
-        /// <summary>
-        /// 模型分组对象
-        /// </summary>
-        public ModelManage ModelGroup = new ModelManage();
+   
         //打开模型库分组文件
         private void OpenModelGroup()
         {
@@ -220,108 +237,170 @@ namespace Esd
                 //打开场景文件， 通过XML的返序列化读取文件，
                 XmlSerializer serializer = new XmlSerializer(typeof(ModelManage));
                 FileStream file = File.OpenRead(appStartPath + "\\ModelGroup.XML");
-                ModelGroup = (ModelManage)serializer.Deserialize(file);
+                EsdSceneManager.Singleton.ModelGroup = (ModelManage)serializer.Deserialize(file);
                 file.Close();
             }
             else
             {
-                ModelGroup = new ModelManage();
+                EsdSceneManager.Singleton.ModelGroup = new ModelManage();
+            }
+        }
+        String appStartPath = System.IO.Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);//得到应用程序启动目录
+        private void AddModelGroup(BitmapImage wuyulanbi,List<ModelStruct> modelgroup,string header)
+        {
+            GroupBox groupbox = new GroupBox();
+            groupbox.Header = header;
+            moxingwrappanel.Children.Add(groupbox);
+            WrapPanel wrappanel = new WrapPanel();
+            groupbox.Content = wrappanel;
+            foreach (ModelStruct temp in modelgroup)
+            {
+                BitmapImage bi = wuyulanbi;
+                StackPanel stackpanel = new StackPanel();
+                string imagename = appStartPath + "\\Media\\Model\\" + temp.ModelName.Substring(0, temp.ModelName.Length - 5) + ".jpg";
+                if (File.Exists(imagename))
+                {
+                    bi = new BitmapImage();
+                    bi.BeginInit();
+                    bi.UriSource = new Uri(imagename);
+                    bi.EndInit();
+                }
+
+                System.Windows.Controls.Image image = new System.Windows.Controls.Image();
+                image.Source = bi;
+                image.Width = 64;
+                image.Height = 64;
+                image.Stretch = Stretch.Fill;
+                stackpanel.Children.Add(image);
+                stackpanel.Children.Add(new Label() { Content = temp.Name });
+                stackpanel.Margin = new Thickness(4);                
+                stackpanel.MouseDown += new MouseButtonEventHandler(stackpanel_MouseDown);
+                wrappanel.Children.Add(stackpanel);
             }
         }
 
+        void stackpanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            foreach (GroupBox gb in moxingwrappanel.Children)
+            {
+                foreach(StackPanel sp in ((WrapPanel)gb.Content).Children)
+                {
+                    sp.Background = Brushes.White;
+                }
+            }
+            StackPanel spanel = sender as StackPanel;
+            spanel.Background = Brushes.BlueViolet;
+           
+            AddModelTool amt = ToolManage.Singleton.GetTool(typeof(AddModelTool))as AddModelTool;
+
+            amt.SetAddModel(((Label)spanel.Children[1]).Content.ToString(), ((GroupBox)((WrapPanel)spanel.Parent).Parent).Header.ToString());
+            if (EsdSceneManager.Singleton.IsStarEdit)
+            {               
+                //设置当前工具为漫游
+                ToolManage.Singleton.ToolType = typeof(AddModelTool);
+            }
+            else
+            {
+                MessageBox.Show("请新建一个场景");
+            }
+        }
         /// <summary>
         /// 载入模型到面板上的
         /// </summary>
         public void LoadAllModel()
-        {
-            /*
-            listView1.Items.Clear();
-            string path = Application.StartupPath;
-            //载入“无预览”图
-            System.Drawing.Image image = new Bitmap(path + "\\yulan.JPG");
-            imageList1.Images.Add(image);
+        { 
 
-
-            int imagecount = 1;
-            ListViewGroup group = new ListViewGroup("建筑物");
-
-
-            listView1.Groups.Add(group);
-            foreach (ModelStruct temp in ModelGroup.建筑物)
-            {
-                string imagename = Application.StartupPath + "\\Media\\Model\\" + temp.ModelName.Substring(0, temp.ModelName.Length - 5) + ".jpg";
-                //为个地方是用来判断是否有和模型名同名的图片，如果有，则为模型的缩略图，将其载入到模型列表的显示中。
-                if (File.Exists(imagename))
-                {
-                    image = new Bitmap(imagename);
-                    imageList1.Images.Add(image);
-                    listView1.Items.Add(temp.Name, imagecount).Group = listView1.Groups[0];
-                    imagecount++;
-                }
-                else//如果模型没有缩略图，则设置为“无预览”图
-                {
-                    listView1.Items.Add(temp.Name, 0).Group = listView1.Groups[0];
-                }
-            }
-            group = new ListViewGroup("植物");
-
-            listView1.Groups.Add(group);
-            foreach (ModelStruct temp in ModelGroup.植物)
-            {
-                string imagename = Application.StartupPath + "\\Media\\Model\\" + temp.ModelName.Substring(0, temp.ModelName.Length - 5) + ".jpg";
-                //为个地方是用来判断是否有和模型名同名的图片，如果有，则为模型的缩略图，将其载入到模型列表的显示中。
-                if (File.Exists(imagename))
-                {
-                    image = new Bitmap(imagename);
-                    imageList1.Images.Add(image);
-                    listView1.Items.Add(temp.Name, imagecount).Group = listView1.Groups[1];
-                    imagecount++;
-                }
-                else//如果模型没有缩略图，则设置为“无预览”图
-                {
-                    listView1.Items.Add(temp.Name, 0).Group = listView1.Groups[1];
-                }
-            }
-            group = new ListViewGroup("室内元素");
-
-            listView1.Groups.Add(group);
-            foreach (ModelStruct temp in ModelGroup.室内元素)
-            {
-                string imagename = Application.StartupPath + "\\Media\\Model\\" + temp.ModelName.Substring(0, temp.ModelName.Length - 5) + ".jpg";
-                //为个地方是用来判断是否有和模型名同名的图片，如果有，则为模型的缩略图，将其载入到模型列表的显示中。
-                if (File.Exists(imagename))
-                {
-                    image = new Bitmap(imagename);
-                    imageList1.Images.Add(image);
-                    listView1.Items.Add(temp.Name, imagecount).Group = listView1.Groups[2];
-                    imagecount++;
-                }
-                else//如果模型没有缩略图，则设置为“无预览”图
-                {
-                    listView1.Items.Add(temp.Name, 0).Group = listView1.Groups[2];
-                }
-            }
-            group = new ListViewGroup("杂项");
-
-            listView1.Groups.Add(group);
-            foreach (ModelStruct temp in ModelGroup.杂项)
-            {
-                string imagename = Application.StartupPath + "\\Media\\Model\\" + temp.ModelName.Substring(0, temp.ModelName.Length - 5) + ".jpg";
-                //为个地方是用来判断是否有和模型名同名的图片，如果有，则为模型的缩略图，将其载入到模型列表的显示中。
-                if (File.Exists(imagename))
-                {
-                    image = new Bitmap(imagename);
-                    imageList1.Images.Add(image);
-                    listView1.Items.Add(temp.Name, imagecount).Group = listView1.Groups[3];
-                    imagecount++;
-                }
-                else//如果模型没有缩略图，则设置为“无预览”图
-                {
-                    listView1.Items.Add(temp.Name, 0).Group = listView1.Groups[3];
-                }
-            }*/
+            BitmapImage wuyulanbi = new BitmapImage();
+            wuyulanbi.BeginInit();
+            wuyulanbi.UriSource = new Uri(appStartPath + "\\yulan.JPG");
+            wuyulanbi.EndInit();          
+           
+            moxingwrappanel.Children.Clear();
+            AddModelGroup(wuyulanbi,EsdSceneManager.Singleton. ModelGroup.建筑物, "建筑物");
+            AddModelGroup(wuyulanbi, EsdSceneManager.Singleton.ModelGroup.植物, "植物");
+            AddModelGroup(wuyulanbi, EsdSceneManager.Singleton.ModelGroup.室内元素, "室内元素");
+            AddModelGroup(wuyulanbi, EsdSceneManager.Singleton.ModelGroup.杂项, "杂项");          
         }
         #endregion
+
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            //设置当前工具为漫游
+            //panel1.Cursor = Cursors.Arrow;
+           
+            ToolManage.Singleton.ToolType = typeof(PanToolClass);
+        }
+
+        private void Image_MouseDown_2(object sender, MouseButtonEventArgs e)
+        {
+            //设置当前工具为漫游
+            ToolManage.Singleton.ToolType = typeof(SelectModelTool);
+        }
+
+        private void Image_MouseDown_3(object sender, MouseButtonEventArgs e)
+        {
+
+            if (EsdSceneManager.Singleton.CurrentOperateNode != null)
+            {
+                ModelEntryStruct mm = EsdSceneManager.Singleton.ModelDataManage.modelEntry.GetModelEntry(EsdSceneManager.Singleton.CurrentOperateNode);
+                if (mm != null)
+                {
+                    AddModelForm dlg = new AddModelForm();
+                    dlg.name_textBox.Text = mm.名称;
+                    dlg.remark_textBox.Text = mm.备注属性;
+                    dlg.picture_textBox.Text = mm.图片名称;
+                    dlg.vido_textBox.Text = mm.视频名称;
+
+                    if ((bool)dlg.ShowDialog())
+                    {
+                        mm.名称 = dlg.name_textBox.Text;
+                        mm.备注属性 = dlg.remark_textBox.Text;
+                        if (dlg.picture_textBox.Text != "")
+                        {
+                            if (dlg.picture_textBox.Text != mm.图片名称)
+                            {
+                                mm.图片名称 = dlg.picture_textBox.Text;
+                                FileStream file = File.OpenRead(dlg.picturename);
+                                BinaryReader reader = new BinaryReader(file);
+                                mm.图片 = reader.ReadBytes((int)file.Length);
+                                reader.Close();
+                                file.Close();
+                            }
+                        }
+                        else
+                        {
+                            mm.图片 = null;
+                            mm.图片名称 = "";
+                        }
+                        if (dlg.vido_textBox.Text != "")
+                        {
+                            if (dlg.vido_textBox.Text != mm.视频名称)
+                            {
+                                mm.视频名称 = dlg.vido_textBox.Text;
+                                FileStream file = File.OpenRead(dlg.vidoname);
+                                BinaryReader reader = new BinaryReader(file);
+                                mm.视频 = reader.ReadBytes((int)file.Length);
+                                reader.Close();
+                                file.Close();
+                            }
+                        }
+                        else
+                        {
+                            mm.视频名称 = "";
+                            mm.视频 = null;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void Image_MouseDown_4(object sender, MouseButtonEventArgs e)
+        {
+            //panel1.Cursor = Cursors.Cross;
+            //设置当前工具为
+            ToolManage.Singleton.ToolType = typeof(AddWaterTool);
+            //ToolManageObject.ToolType = typeof(AddWaterTool);
+        }
 
     }
 }

@@ -51,6 +51,14 @@ namespace Esd
             get;
             set;
         }
+        /// <summary>
+        /// 增加模型时的临时节点
+        /// </summary>
+        public SceneNode AddmodelNode
+        {
+            get;
+            set;
+        }
         public bool IsStarEdit
         {
             get;
@@ -65,6 +73,37 @@ namespace Esd
         /// 当前漫游的方式
         /// </summary>
         public bool PanState
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// 模型分组对象
+        /// </summary>
+        public ModelManage ModelGroup
+        {
+            get;
+            set;
+        }
+        //主节点 主要用来存放模型
+        public SceneNode MainNode
+        {
+            get;
+            set;
+        }
+        //当前操作节点
+        public SceneNode CurrentOperateNode
+        {
+            get;
+            set;
+        }
+        //当前操作水和草的模型
+        public SceneNode CurrentWgOperageNode
+        {
+            get;
+            set;
+        }
+        public SceneNode WRnode
         {
             get;
             set;

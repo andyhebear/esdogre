@@ -42,3 +42,21 @@ F:\dotnet proj\Esd\temp\Esd\obj\Debug\Esd_MarkupCompile.cache
 F:\dotnet proj\Esd\temp\Esd\obj\Debug\Esd.g.resources
 F:\dotnet proj\Esd\temp\Esd\obj\Debug\Esd.Properties.Resources.resources
 F:\dotnet proj\Esd\temp\Esd\obj\Debug\Esd.csproj.GenerateResource.Cache
+F:\newogre\code\esdogre\Esd\obj\Debug\Esd.exe
+F:\newogre\code\esdogre\bin\Esd.exe
+F:\newogre\code\esdogre\bin\Esd.pdb
+F:\newogre\code\esdogre\Esd\obj\Debug\ResolveAssemblyReference.cache
+F:\newogre\code\esdogre\Esd\obj\Debug\Window1.baml
+F:\newogre\code\esdogre\Esd\obj\Debug\窗体\NewScene.baml
+F:\newogre\code\esdogre\Esd\obj\Debug\Window1.g.cs
+F:\newogre\code\esdogre\Esd\obj\Debug\窗体\NewScene.g.cs
+F:\newogre\code\esdogre\Esd\obj\Debug\App.g.cs
+F:\newogre\code\esdogre\Esd\obj\Debug\Esd_MarkupCompile.cache
+F:\newogre\code\esdogre\Esd\obj\Debug\Esd.g.resources
+F:\newogre\code\esdogre\Esd\obj\Debug\Esd.Properties.Resources.resources
+F:\newogre\code\esdogre\Esd\obj\Debug\Esd.csproj.GenerateResource.Cache
+F:\newogre\code\esdogre\Esd\obj\Debug\Esd.pdb
+F:\newogre\code\esdogre\Esd\obj\Debug\窗体\AddModelForm.baml
+F:\newogre\code\esdogre\Esd\obj\Debug\窗体\AddModelForm.g.cs
+F:\newogre\code\esdogre\Esd\obj\Debug\窗体\AddbillBoard.baml
+F:\newogre\code\esdogre\Esd\obj\Debug\窗体\AddbillBoard.g.cs

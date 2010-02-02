@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-F:\dotnet proj\Esd\temp\Esd\obj\Debug\
+F:\newogre\code\esdogre\Esd\obj\Debug\
 Esd
 none
 false
 DEBUG;TRACE
-F:\dotnet proj\Esd\temp\Esd\App.xaml
-21919243368
+F:\newogre\code\esdogre\Esd\App.xaml
+4697644370
 
-82025364152
-131814228420
-Window1.xaml;窗体\NewScene.xaml;
+13436292644
+131899874783
+Window1.xaml;窗体\AddbillBoard.xaml;窗体\AddModelForm.xaml;窗体\NewScene.xaml;
 

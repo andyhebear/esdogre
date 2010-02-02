@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrawLine3DClass.cs" />
     <Compile Include="EsdCommon.cs" />
     <Compile Include="EsdSceneManager.cs" />
     <Compile Include="ITool.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="工具\PanToolClass.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="工具\SelectModelTool.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OgreLib\OgreLib.csproj">
