@@ -494,7 +494,7 @@ namespace OgreLib
         /// <summary>
         /// 
         /// </summary>
-        public Vector3 lockat = new Vector3(0, 0, 0);
+        private Vector3 lockat = new Vector3(0, 0, 0);
         /// <summary>
         /// 摄像机看的方向
         /// </summary>

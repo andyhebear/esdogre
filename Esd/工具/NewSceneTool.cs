@@ -77,6 +77,7 @@ namespace Esd.Tool
 
             //开始编辑标志
             EsdSceneManager.Singleton.IsStarEdit = true;
+            EsdSceneManager.Singleton.OgreImage.UpdataCamera();
         }
     }
 }
