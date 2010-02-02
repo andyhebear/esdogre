@@ -10,3 +10,5 @@ F:\dotnet proj\Esd\temp\EsdCommon\bin\Debug\Mogre.dll
 F:\dotnet proj\Esd\temp\EsdCommon\obj\Debug\ResolveAssemblyReference.cache
 F:\dotnet proj\Esd\temp\EsdCommon\obj\Debug\EsdCommon.dll
 F:\dotnet proj\Esd\temp\EsdCommon\obj\Debug\EsdCommon.pdb
+F:\dotnet proj\Esd\temp\EsdCommon\bin\Debug\OgreLib.dll
+F:\dotnet proj\Esd\temp\EsdCommon\bin\Debug\OgreLib.pdb

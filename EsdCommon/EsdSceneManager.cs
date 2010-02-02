@@ -72,7 +72,7 @@ namespace Esd
         #region 人物状态变量
         public Point manlocate = new Point();
         public Point dpt = new Point();
-        public Point deslocate
+        public Point Deslocate
         {
             get
             {
@@ -141,5 +141,29 @@ namespace Esd
             }
             return angle;
         }
+        /// <summary>
+        /// 根据起点与方向向量，求在线上指定距离的点
+        /// </summary>
+        /// <param name="pt">起点</param>
+        /// <param name="x">方向向量x</param>
+        /// <param name="y">方向向量y</param>
+        /// <param name="z">方向向量z</param>
+        /// <param name="d">距离</param>
+        /// <returns>计算点</returns>
+        public Vector3 GetPointOnLine(Vector3 pt, double x, double y, double z, double d)
+        {
+            double max = System.Math.Max(System.Math.Abs(x), System.Math.Abs(y));
+            max = System.Math.Max(max, System.Math.Abs(z));
+            x /= max;
+            y /= max;
+            z /= max;
+
+            x = pt.x + x * d;
+            y = pt.y + y * d;
+            z = pt.z + z * d;
+            return new Vector3((float)x, (float)y, (float)z);
+        }
+       
+
     }
 }

@@ -63,10 +63,10 @@
                     <Image  Name="img_right" Source="/Esd;component/ico/youzuan_toolStripButton.Image.png" MouseLeftButtonDown="Viewport_MouseDown"  MouseLeave="Viewport_MouseLeave" MouseLeftButtonUp="Viewport_MouseUp"  ></Image>
                 </Button>
                 <Button Name="Button5"  Width="36" Height="34" >
-                    <Image  Source="/Esd;component/ico/manyou_toolStripButton.Image.png"></Image>
+                    <Image  Source="/Esd;component/ico/manyou_toolStripButton.Image.png" ></Image>
                 </Button>
                 <Button Name="Button6"  Width="36" Height="34" >
-                    <Image  Source="/Esd;component/ico/toolStripButton12.Image.png"></Image>
+                    <Image  Source="/Esd;component/ico/toolStripButton12.Image.png" MouseDown="Image_MouseDown"></Image>
                 </Button>
                 <Button Name="Button7"  Width="36" Height="34" >
                     <Image  Source="/Esd;component/ico/toolStripButton13.Image.png"></Image>
@@ -97,8 +97,19 @@
         <Border Height="25" Background="#ffff99"  BorderThickness="1" DockPanel.Dock="Bottom">
             <TextBlock Foreground="black">Dock = "Bottom"</TextBlock>
         </Border>
-        <Border Width="200" Background="PaleGreen" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
-            <TextBlock Foreground="black">Dock = "Left"</TextBlock>
+        <Border Width="300"  BorderThickness="1" DockPanel.Dock="Right" Name="leftorder">
+            <TabControl>
+                <TabItem Header="模型" Name="tabItem1">
+                    <WrapPanel Name="moxingwrappanel">
+                    </WrapPanel>
+                </TabItem>
+                <TabItem Header="属性" Name="tabItem2">
+                    <Grid />
+                </TabItem>
+                <TabItem Header="模型树" Name="tabItem3">
+                    <Grid />
+                </TabItem>
+            </TabControl>
         </Border>
         <Border Background="White" BorderBrush="Black" BorderThickness="1">
              <Image x:Name="RenterTargetControl" Stretch="Fill"

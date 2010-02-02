@@ -16,6 +16,10 @@ using System.ComponentModel;
 using System.Windows.Media.Animation;
 using Esd.Tool;
 using EsdCommon;
+using EsdCommon.Tool;
+using System.Diagnostics;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Esd
 {
@@ -66,6 +70,7 @@ namespace Esd
             // Create a skydome
             sceneMgr.SetSkyDome(true, "SkyMat", -5, 2);
             EsdSceneManager.CreateSceneManager(_ogreImage);
+            inittool();
         }
         private void RenterTargetControl_SizeChanged(object sender, SizeChangedEventArgs e)
         {
@@ -78,14 +83,27 @@ namespace Esd
             //更新场景视图
             viewporttool.UpdateViewport();
         }
+        /// <summary>
+        /// 初始或啊工具
+        /// </summary>
+        private void inittool()
+        {
+            //漫游工具
+            ToolManage.Singleton.AddTool(new PanToolClass());
+            //设置当前工具为漫游
+            ToolManage.Singleton.ToolType = typeof(PanToolClass);
+        }
         private void Window1_OnLoaded(object sender, RoutedEventArgs e)
         {
             _ogreImage.InitOgreAsync();
-          /*  panel1.MouseDown += new MouseEventHandler(ToolManageObject.MouseDown);
-            panel1.MouseMove += new MouseEventHandler(ToolManageObject.MouseMove);
-            panel1.MouseUp += new MouseEventHandler(ToolManageObject.MouseUp);
-            this.KeyDown += new KeyEventHandler(ToolManageObject.KeyDown);
-            this.KeyUp += new KeyEventHandler(ToolManageObject.KeyUp);*/
+            LoadModelFiles();
+            //向工具管理器增加工具
+
+            /*  panel1.MouseDown += new MouseEventHandler(ToolManageObject.MouseDown);
+              panel1.MouseMove += new MouseEventHandler(ToolManageObject.MouseMove);
+              panel1.MouseUp += new MouseEventHandler(ToolManageObject.MouseUp);
+              this.KeyDown += new KeyEventHandler(ToolManageObject.KeyDown);
+              this.KeyUp += new KeyEventHandler(ToolManageObject.KeyUp);*/
 
 
         }
@@ -94,7 +112,7 @@ namespace Esd
             RenterTargetControl.Source = null;
             EsdSceneManager.Singleton.MaterialPtr = null;
             _ogreImage.Dispose();
-        }     
+        }
 
         private void NewScene_Click(object sender, RoutedEventArgs e)
         {
@@ -143,9 +161,9 @@ namespace Esd
         private void OgreMouseDown(object sender, MouseButtonEventArgs e)
         {
             ToolManage.Singleton.MouseDown(sender, e);
-           /* Point position = e.GetPosition(RenterTargetControl);
+            /* Point position = e.GetPosition(RenterTargetControl);
 
-            MessageBox.Show(position.ToString());*/
+             MessageBox.Show(position.ToString());*/
         }
 
         private void OgreMouseMove(object sender, MouseEventArgs e)
@@ -163,5 +181,147 @@ namespace Esd
         {
             ToolManage.Singleton.KeyUp(sender, e);
         }
+        //复位
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _ogreImage.RestCamer();
+        }
+        #region 模型操作
+        /// <summary>
+        /// 模型文件夹中的列表，用来在导入模型时进行判断
+        /// </summary>
+        List<string> ModelFolderFiles = new List<string>();
+        /// <summary>
+        /// 载入模型文件夹中的文件名，用来做导入模型时用。
+        /// </summary>
+        private void LoadModelFiles()
+        {         
+            String appStartPath = System.IO.Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);//得到应用程序启动目录
+            string path = appStartPath + "\\Media\\Model";
+            string[] filenames = Directory.GetFiles(path);
+
+            foreach (string filename in filenames)
+            {
+                string name = System.IO.Path.GetFileName(filename);
+                ModelFolderFiles.Add(name);
+            }
+        }
+        /// <summary>
+        /// 模型分组对象
+        /// </summary>
+        public ModelManage ModelGroup = new ModelManage();
+        //打开模型库分组文件
+        private void OpenModelGroup()
+        {
+
+            String appStartPath = System.IO.Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);//得到应用程序启动目录
+            if (File.Exists(appStartPath + "\\ModelGroup.XML"))
+            {
+                //打开场景文件， 通过XML的返序列化读取文件，
+                XmlSerializer serializer = new XmlSerializer(typeof(ModelManage));
+                FileStream file = File.OpenRead(appStartPath + "\\ModelGroup.XML");
+                ModelGroup = (ModelManage)serializer.Deserialize(file);
+                file.Close();
+            }
+            else
+            {
+                ModelGroup = new ModelManage();
+            }
+        }
+
+        /// <summary>
+        /// 载入模型到面板上的
+        /// </summary>
+        public void LoadAllModel()
+        {
+            /*
+            listView1.Items.Clear();
+            string path = Application.StartupPath;
+            //载入“无预览”图
+            System.Drawing.Image image = new Bitmap(path + "\\yulan.JPG");
+            imageList1.Images.Add(image);
+
+
+            int imagecount = 1;
+            ListViewGroup group = new ListViewGroup("建筑物");
+
+
+            listView1.Groups.Add(group);
+            foreach (ModelStruct temp in ModelGroup.建筑物)
+            {
+                string imagename = Application.StartupPath + "\\Media\\Model\\" + temp.ModelName.Substring(0, temp.ModelName.Length - 5) + ".jpg";
+                //为个地方是用来判断是否有和模型名同名的图片，如果有，则为模型的缩略图，将其载入到模型列表的显示中。
+                if (File.Exists(imagename))
+                {
+                    image = new Bitmap(imagename);
+                    imageList1.Images.Add(image);
+                    listView1.Items.Add(temp.Name, imagecount).Group = listView1.Groups[0];
+                    imagecount++;
+                }
+                else//如果模型没有缩略图，则设置为“无预览”图
+                {
+                    listView1.Items.Add(temp.Name, 0).Group = listView1.Groups[0];
+                }
+            }
+            group = new ListViewGroup("植物");
+
+            listView1.Groups.Add(group);
+            foreach (ModelStruct temp in ModelGroup.植物)
+            {
+                string imagename = Application.StartupPath + "\\Media\\Model\\" + temp.ModelName.Substring(0, temp.ModelName.Length - 5) + ".jpg";
+                //为个地方是用来判断是否有和模型名同名的图片，如果有，则为模型的缩略图，将其载入到模型列表的显示中。
+                if (File.Exists(imagename))
+                {
+                    image = new Bitmap(imagename);
+                    imageList1.Images.Add(image);
+                    listView1.Items.Add(temp.Name, imagecount).Group = listView1.Groups[1];
+                    imagecount++;
+                }
+                else//如果模型没有缩略图，则设置为“无预览”图
+                {
+                    listView1.Items.Add(temp.Name, 0).Group = listView1.Groups[1];
+                }
+            }
+            group = new ListViewGroup("室内元素");
+
+            listView1.Groups.Add(group);
+            foreach (ModelStruct temp in ModelGroup.室内元素)
+            {
+                string imagename = Application.StartupPath + "\\Media\\Model\\" + temp.ModelName.Substring(0, temp.ModelName.Length - 5) + ".jpg";
+                //为个地方是用来判断是否有和模型名同名的图片，如果有，则为模型的缩略图，将其载入到模型列表的显示中。
+                if (File.Exists(imagename))
+                {
+                    image = new Bitmap(imagename);
+                    imageList1.Images.Add(image);
+                    listView1.Items.Add(temp.Name, imagecount).Group = listView1.Groups[2];
+                    imagecount++;
+                }
+                else//如果模型没有缩略图，则设置为“无预览”图
+                {
+                    listView1.Items.Add(temp.Name, 0).Group = listView1.Groups[2];
+                }
+            }
+            group = new ListViewGroup("杂项");
+
+            listView1.Groups.Add(group);
+            foreach (ModelStruct temp in ModelGroup.杂项)
+            {
+                string imagename = Application.StartupPath + "\\Media\\Model\\" + temp.ModelName.Substring(0, temp.ModelName.Length - 5) + ".jpg";
+                //为个地方是用来判断是否有和模型名同名的图片，如果有，则为模型的缩略图，将其载入到模型列表的显示中。
+                if (File.Exists(imagename))
+                {
+                    image = new Bitmap(imagename);
+                    imageList1.Images.Add(image);
+                    listView1.Items.Add(temp.Name, imagecount).Group = listView1.Groups[3];
+                    imagecount++;
+                }
+                else//如果模型没有缩略图，则设置为“无预览”图
+                {
+                    listView1.Items.Add(temp.Name, 0).Group = listView1.Groups[3];
+                }
+            }*/
+        }
+        #endregion
+
     }
 }
