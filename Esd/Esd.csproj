@@ -104,6 +104,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="工具\AddBillBoardTool.cs" />
+    <Compile Include="工具\AddGrassTool.cs" />
     <Compile Include="工具\AddModelTool.cs" />
     <Compile Include="工具\AddWaterTool.cs" />
     <Compile Include="工具\NewSceneTool.cs" />

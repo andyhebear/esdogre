@@ -72,6 +72,7 @@ namespace Esd
             //当窗口改变大小时。会重表创建渲染窗口，这时，场景管理器中的所有结点会被销毁，所以这需重新创建。
             EsdSceneManager.Singleton.MainNode = sceneMgr.RootSceneNode.CreateChildSceneNode("ogreNode");
             EsdSceneManager.Singleton.AddmodelNode = sceneMgr.RootSceneNode.CreateChildSceneNode();
+            EsdSceneManager.Singleton.WRnode = sceneMgr.RootSceneNode.CreateChildSceneNode("wrnode");
             inittool();
         }
         private void RenterTargetControl_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -103,6 +104,8 @@ namespace Esd
             SelectModelTool smt = new SelectModelTool();
             smt.SetModifyTextEd = SetModifyTextEd;
             ToolManage.Singleton.AddTool(smt);
+            ToolManage.Singleton.AddTool(new AddWaterTool());
+            ToolManage.Singleton.AddTool(new AddGrassTool());
             //设置当前工具为漫游
             ToolManage.Singleton.ToolType = typeof(PanToolClass);
         }
@@ -400,6 +403,27 @@ namespace Esd
             //设置当前工具为
             ToolManage.Singleton.ToolType = typeof(AddWaterTool);
             //ToolManageObject.ToolType = typeof(AddWaterTool);
+        }
+
+        private void Image_MouseDown_5(object sender, MouseButtonEventArgs e)
+        {
+            //panel1.Cursor = Cursors.Cross;
+            //设置当前工具为
+            ToolManage.Singleton.ToolType = typeof(AddGrassTool);
+            //ToolManageObject.ToolType = typeof(AddGrassTool);
+        }
+
+        private void Image_MouseDown_6(object sender, MouseButtonEventArgs e)
+        {
+            string helpfile = "help.chm";
+            if (File.Exists(helpfile))
+            {
+                System.Diagnostics.Process.Start(helpfile); 
+            }
+            else
+            {
+                MessageBox.Show("系统文件丢失！", "提示");
+            }
         }
 
     }
