@@ -84,13 +84,13 @@
                     <Image  Source="/Esd;component/ico/toolStripButton2.Image.png" MouseDown="Image_MouseDown_4"></Image>
                 </Button>
                 <Button Name="Button12"  Width="36" Height="34" >
-                    <Image  Source="/Esd;component/ico/toolStripButton3.Image.png"></Image>
+                    <Image  Source="/Esd;component/ico/toolStripButton3.Image.png" MouseDown="Image_MouseDown_5"></Image>
                 </Button>
                 <Button Name="Button13"  Width="36" Height="34" >
                     <Image  Source="/Esd;component/ico/toolStripButton4.Image.png"></Image>
                 </Button>
                 <Button Name="Button14"  Width="36" Height="34" >
-                    <Image  Source="/Esd;component/ico/toolStripButton16.Image.png"></Image>
+                    <Image  Source="/Esd;component/ico/toolStripButton16.Image.png"  MouseDown="Image_MouseDown_6"></Image>
                 </Button>
             </ToolBar>
         </Border>
