@@ -56,7 +56,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ITool.cs" />
     <Compile Include="ogre\Designer.cs" />
     <Compile Include="ogre\OgreImage.cs" />
     <Compile Include="ogre\OgreImage.Properties.cs" />

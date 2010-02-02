@@ -1,235 +1,204 @@
-16:30:38: Creating resource group General
-16:30:38: Creating resource group Internal
-16:30:38: Creating resource group Autodetect
-16:30:38: SceneManagerFactory for type 'DefaultSceneManager' registered.
-16:30:38: Registering ResourceManager for type Material
-16:30:38: Registering ResourceManager for type Mesh
-16:30:38: Registering ResourceManager for type Skeleton
-16:30:38: MovableObjectFactory for type 'ParticleSystem' registered.
-16:30:38: OverlayElementFactory for type Panel registered.
-16:30:38: OverlayElementFactory for type BorderPanel registered.
-16:30:38: OverlayElementFactory for type TextArea registered.
-16:30:38: Registering ResourceManager for type Font
-16:30:38: ArchiveFactory for archive type FileSystem registered.
-16:30:38: ArchiveFactory for archive type Zip registered.
-16:30:38: FreeImage version: 3.13.1
-16:30:38: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
-16:30:38: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic,bay,bmq,cr2,crw,cs1,dc2,dcr,dng,erf,fff,hdr,k25,kdc,mdc,mos,mrw,nef,orf,pef,pxn,raf,raw,rdc,sr2,srf,arw,3fr,cine,ia,kc2,mef,nrw,qtk,rw2,sti,drf,dsc,ptx,cap,iiq,rwz
-16:30:38: DDS codec registering
-16:30:38: Registering ResourceManager for type HighLevelGpuProgram
-16:30:38: Registering ResourceManager for type Compositor
-16:30:38: MovableObjectFactory for type 'Entity' registered.
-16:30:38: MovableObjectFactory for type 'Light' registered.
-16:30:38: MovableObjectFactory for type 'BillboardSet' registered.
-16:30:38: MovableObjectFactory for type 'ManualObject' registered.
-16:30:38: MovableObjectFactory for type 'BillboardChain' registered.
-16:30:38: MovableObjectFactory for type 'RibbonTrail' registered.
-16:30:38: Loading library .\RenderSystem_Direct3D9
-16:30:38: Installing plugin: D3D9 RenderSystem
-16:30:38: D3D9 : Direct3D9 Rendering Subsystem created.
-16:30:38: D3D9: Driver Detection Starts
-16:30:38: D3D9: Driver Detection Ends
-16:30:38: Plugin successfully installed
-16:30:38: Loading library .\RenderSystem_GL
-16:30:38: Installing plugin: GL RenderSystem
-16:30:38: OpenGL Rendering Subsystem created.
-16:30:38: Plugin successfully installed
-16:30:38: Loading library .\Plugin_ParticleFX
-16:30:38: Installing plugin: ParticleFX
-16:30:38: Particle Emitter Type 'Point' registered
-16:30:38: Particle Emitter Type 'Box' registered
-16:30:38: Particle Emitter Type 'Ellipsoid' registered
-16:30:38: Particle Emitter Type 'Cylinder' registered
-16:30:38: Particle Emitter Type 'Ring' registered
-16:30:38: Particle Emitter Type 'HollowEllipsoid' registered
-16:30:38: Particle Affector Type 'LinearForce' registered
-16:30:38: Particle Affector Type 'ColourFader' registered
-16:30:38: Particle Affector Type 'ColourFader2' registered
-16:30:38: Particle Affector Type 'ColourImage' registered
-16:30:38: Particle Affector Type 'ColourInterpolator' registered
-16:30:38: Particle Affector Type 'Scaler' registered
-16:30:38: Particle Affector Type 'Rotator' registered
-16:30:38: Particle Affector Type 'DirectionRandomiser' registered
-16:30:38: Particle Affector Type 'DeflectorPlane' registered
-16:30:38: Plugin successfully installed
-16:30:38: Loading library .\Plugin_BSPSceneManager
-16:30:38: Installing plugin: BSP Scene Manager
-16:30:38: Plugin successfully installed
-16:30:38: Loading library .\Plugin_OctreeSceneManager
-16:30:38: Installing plugin: Octree & Terrain Scene Manager
-16:30:38: Plugin successfully installed
-16:30:38: Loading library .\Plugin_CgProgramManager
-16:30:38: Installing plugin: Cg Program Manager
-16:30:38: Plugin successfully installed
-16:30:38: *-*-* OGRE Initialising
-16:30:38: *-*-* Version 1.6.5 (Shoggoth)
-16:30:38: Added resource location 'Media' of type 'FileSystem' to resource group 'General'
-16:30:38: Added resource location 'Media\BlackGround' of type 'FileSystem' to resource group 'General'
-16:30:38: Added resource location 'Media\Model' of type 'FileSystem' to resource group 'General'
-16:30:38: D3D9 : RenderSystem Option: Full Screen = No
-16:30:38: D3D9 : RenderSystem Option: Video Mode = 1024 x 768 @ 32-bit colour
-16:30:38: CPU Identifier & Features
-16:30:38: -------------------------
-16:30:38:  *   CPU ID: GenuineIntel: Intel(R) Pentium(R) Dual  CPU  E2180  @ 2.00GHz
-16:30:38:  *      SSE: yes
-16:30:38:  *     SSE2: yes
-16:30:38:  *     SSE3: yes
-16:30:38:  *      MMX: yes
-16:30:38:  *   MMXEXT: yes
-16:30:38:  *    3DNOW: no
-16:30:38:  * 3DNOWEXT: no
-16:30:38:  *     CMOV: yes
-16:30:38:  *      TSC: yes
-16:30:38:  *      FPU: yes
-16:30:38:  *      PRO: yes
-16:30:38:  *       HT: no
-16:30:38: -------------------------
-16:30:38: D3D9 : Subsystem Initialising
-16:30:38: ***************************************
-16:30:38: *** D3D9 : Subsystem Initialised OK ***
-16:30:38: ***************************************
-16:30:38: D3D9RenderSystem::_createRenderWindow "OgreImageSource Windows", 0x0 windowed  miscParams: externalWindowHandle=395054 
-16:30:38: D3D9 : Created D3D9 Rendering Window 'OgreImageSource Windows' : 1366x706, 32bpp
-16:30:38: D3D9 : WARNING - disabling VSync in windowed mode can cause timing issues at lower frame rates, turn VSync on if you observe this problem.
-16:30:38: Registering ResourceManager for type Texture
-16:30:38: Registering ResourceManager for type GpuProgram
-16:30:38: RenderSystem capabilities
-16:30:38: -------------------------
-16:30:38: RenderSystem Name: Direct3D9 Rendering Subsystem
-16:30:38: GPU Vendor: intel
-16:30:38: Device Name: Intel(R) G33/G31 Express Chipset Family (Microsoft Corporation - WDDM 1.0)
-16:30:38: Driver Version: 8.15.10.1749
-16:30:38:  * Fixed function pipeline: yes
-16:30:38:  * Hardware generation of mipmaps: yes
-16:30:38:  * Texture blending: yes
-16:30:38:  * Anisotropic texture filtering: yes
-16:30:38:  * Dot product texture operation: yes
-16:30:38:  * Cube mapping: yes
-16:30:38:  * Hardware stencil buffer: yes
-16:30:38:    - Stencil depth: 8
-16:30:38:    - Two sided stencil support: yes
-16:30:38:    - Wrap stencil values: yes
-16:30:38:  * Hardware vertex / index buffers: yes
-16:30:38:  * Vertex programs: yes
-16:30:38:  * Fragment programs: yes
-16:30:38:  * Geometry programs: no
-16:30:38:  * Supported Shader Profiles: hlsl ps_1_1 ps_1_2 ps_1_3 ps_1_4 ps_2_0 vs_1_1 vs_2_0 vs_2_a vs_2_x vs_3_0
-16:30:38:  * Texture Compression: yes
-16:30:38:    - DXT: yes
-16:30:38:    - VTC: no
-16:30:38:  * Scissor Rectangle: yes
-16:30:38:  * Hardware Occlusion Query: no
-16:30:38:  * User clip planes: yes
-16:30:38:  * VET_UBYTE4 vertex element type: yes
-16:30:38:  * Infinite far plane projection: yes
-16:30:38:  * Hardware render-to-texture: yes
-16:30:38:  * Floating point textures: no
-16:30:38:  * Non-power-of-two textures: yes (limited)
-16:30:38:  * Volume textures: yes
-16:30:38:  * Multiple Render Targets: 1
-16:30:38:    - With different bit depths: no
-16:30:38:  * Point Sprites: yes
-16:30:38:  * Extended point parameters: yes
-16:30:38:  * Max Point Size: 256
-16:30:38:  * Vertex texture fetch: no
-16:30:38:  * Render to Vertex Buffer : no
-16:30:38:  * DirectX per stage constants: yes
-16:30:38: ResourceBackgroundQueue - threading disabled
-16:30:38: Particle Renderer Type 'billboard' registered
-16:30:38: SceneManagerFactory for type 'BspSceneManager' registered.
-16:30:38: Registering ResourceManager for type BspLevel
-16:30:38: SceneManagerFactory for type 'OctreeSceneManager' registered.
-16:30:38: SceneManagerFactory for type 'TerrainSceneManager' registered.
-16:30:38: Parsing scripts for resource group Autodetect
-16:30:38: Finished parsing scripts for resource group Autodetect
-16:30:38: Parsing scripts for resource group General
-16:30:38: Parsing script Shaders.program
-16:30:38: Parsing script clouds.material
-16:30:38: Parsing script 1253.material
-16:30:38: Parsing script baogaoting.mesh.material
-16:30:38: Parsing script bijiben.mesh.material
-16:30:38: Parsing script qian.material
-16:30:38: Parsing script yandou.mesh.material
-16:30:38: Parsing script jiwei.mesh.material
-16:30:38: Parsing script bs1.material
-16:30:38: Parsing script Foregrou.material
-16:30:38: Parsing script zuqiu.mesh.material
-16:30:38: Parsing script guangxiagongyu.material
-16:30:38: Parsing script hs.mesh.material
-16:30:39: Parsing script cao3.mesh.material
-16:30:39: Parsing script tsg.mesh.material
-16:30:39: Parsing script canting.mesh.material
-16:30:39: Parsing script tiyiguan.mesh.material
-16:30:39: Parsing script book.mesh.material
-16:30:39: Parsing script dianhua.mesh.material
-16:30:39: Parsing script cao2.mesh.material
-16:30:39: Parsing script yizi.mesh.material
-16:30:39: Parsing script bsminfangl.material
-16:30:39: Parsing script Model.mesh.material
-16:30:39: Parsing script minfang.mesh.material
-16:30:39: Parsing script zhuozi.mesh.material
-16:30:39: Parsing script cao1.mesh.material
-16:30:39: Parsing script jiaoxuelou.mesh.material
-16:30:39: Parsing script qianz.material
-16:30:39: Parsing script qianzj.material
-16:30:39: Parsing script 40701.mesh.material
-16:30:39: Parsing script tree3.mesh.material
-16:30:39: Parsing script yhb.mesh.material
-16:30:39: Parsing script shiyanlou.mesh.material
-16:30:39: Parsing script flower3.mesh.material
-16:30:39: Parsing script zgyh.mesh.material
-16:30:39: Parsing script tree2.mesh.material
-16:30:39: Parsing script xiezitai.mesh.material
-16:30:39: Parsing script changyi2.mesh.material
-16:30:39: Parsing script flower2.mesh.material
-16:30:39: Parsing script lanqiujia.mesh.material
-16:30:39: Parsing script tree1.mesh.material
-16:30:39: Parsing script canting11.mesh.material
-16:30:39: Parsing script changyi1.mesh.material
-16:30:39: Parsing script __00113.material
-16:30:39: Parsing script dianxinl.material
-16:30:39: Parsing script flower1.mesh.material
-16:30:39: Parsing script sushelou.mesh.material
-16:30:39: Parsing script taideng.mesh.material
-16:30:39: Parsing script xingzhenglou11.mesh.material
-16:30:39: Parsing script qiany.material
-16:30:39: Parsing script Example.particle
-16:30:39: Finished parsing scripts for resource group General
-16:30:39: Parsing scripts for resource group Internal
-16:30:39: Finished parsing scripts for resource group Internal
-16:30:39: Texture: clouds.jpg: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
-16:30:41: D3D9 : ***** Dimensions altered by the render system
-16:30:41: D3D9 : ***** Source image dimensions : 1024x593
-16:30:41: D3D9 : ***** Texture dimensions : 1024x1024
-16:30:41: Texture: middleschool.jpg: Loading 1 faces(PF_R8G8B8,1024x593x1) with 10 generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x1024x1.
-16:30:49: Unregistering ResourceManager for type BspLevel
-16:30:49: *-*-* OGRE Shutdown
-16:30:49: Unregistering ResourceManager for type Compositor
-16:30:49: Unregistering ResourceManager for type Font
-16:30:49: Unregistering ResourceManager for type Skeleton
-16:30:49: Unregistering ResourceManager for type Mesh
-16:30:49: Unregistering ResourceManager for type HighLevelGpuProgram
-16:30:49: Uninstalling plugin: Cg Program Manager
-16:30:49: Plugin successfully uninstalled
-16:30:49: Unloading library .\Plugin_CgProgramManager
-16:30:49: Uninstalling plugin: Octree & Terrain Scene Manager
-16:30:49: Plugin successfully uninstalled
-16:30:49: Unloading library .\Plugin_OctreeSceneManager
-16:30:49: Uninstalling plugin: BSP Scene Manager
-16:30:49: Plugin successfully uninstalled
-16:30:49: Unloading library .\Plugin_BSPSceneManager
-16:30:49: Uninstalling plugin: ParticleFX
-16:30:49: Plugin successfully uninstalled
-16:30:49: Unloading library .\Plugin_ParticleFX
-16:30:49: Uninstalling plugin: GL RenderSystem
-16:30:49: *** Stopping Win32GL Subsystem ***
-16:30:49: Plugin successfully uninstalled
-16:30:49: Unloading library .\RenderSystem_GL
-16:30:49: Uninstalling plugin: D3D9 RenderSystem
-16:30:49: D3D9 : Shutting down cleanly.
-16:30:49: Unregistering ResourceManager for type Texture
-16:30:49: Unregistering ResourceManager for type GpuProgram
-16:30:49: D3D9 : Direct3D9 Rendering Subsystem destroyed.
-16:30:49: Plugin successfully uninstalled
-16:30:49: Unloading library .\RenderSystem_Direct3D9
-16:30:49: Unregistering ResourceManager for type Material
+09:18:55: Creating resource group General
+09:18:55: Creating resource group Internal
+09:18:55: Creating resource group Autodetect
+09:18:55: SceneManagerFactory for type 'DefaultSceneManager' registered.
+09:18:55: Registering ResourceManager for type Material
+09:18:55: Registering ResourceManager for type Mesh
+09:18:55: Registering ResourceManager for type Skeleton
+09:18:55: MovableObjectFactory for type 'ParticleSystem' registered.
+09:18:55: OverlayElementFactory for type Panel registered.
+09:18:55: OverlayElementFactory for type BorderPanel registered.
+09:18:55: OverlayElementFactory for type TextArea registered.
+09:18:55: Registering ResourceManager for type Font
+09:18:55: ArchiveFactory for archive type FileSystem registered.
+09:18:55: ArchiveFactory for archive type Zip registered.
+09:18:55: FreeImage version: 3.13.1
+09:18:55: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+09:18:55: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic,bay,bmq,cr2,crw,cs1,dc2,dcr,dng,erf,fff,hdr,k25,kdc,mdc,mos,mrw,nef,orf,pef,pxn,raf,raw,rdc,sr2,srf,arw,3fr,cine,ia,kc2,mef,nrw,qtk,rw2,sti,drf,dsc,ptx,cap,iiq,rwz
+09:18:55: DDS codec registering
+09:18:55: Registering ResourceManager for type HighLevelGpuProgram
+09:18:55: Registering ResourceManager for type Compositor
+09:18:55: MovableObjectFactory for type 'Entity' registered.
+09:18:55: MovableObjectFactory for type 'Light' registered.
+09:18:55: MovableObjectFactory for type 'BillboardSet' registered.
+09:18:55: MovableObjectFactory for type 'ManualObject' registered.
+09:18:55: MovableObjectFactory for type 'BillboardChain' registered.
+09:18:55: MovableObjectFactory for type 'RibbonTrail' registered.
+09:18:55: Loading library .\RenderSystem_Direct3D9
+09:18:55: Installing plugin: D3D9 RenderSystem
+09:18:55: D3D9 : Direct3D9 Rendering Subsystem created.
+09:18:55: D3D9: Driver Detection Starts
+09:18:55: D3D9: Driver Detection Ends
+09:18:55: Plugin successfully installed
+09:18:55: Loading library .\RenderSystem_GL
+09:18:55: Installing plugin: GL RenderSystem
+09:18:55: OpenGL Rendering Subsystem created.
+09:18:55: Plugin successfully installed
+09:18:55: Loading library .\Plugin_ParticleFX
+09:18:55: Installing plugin: ParticleFX
+09:18:55: Particle Emitter Type 'Point' registered
+09:18:55: Particle Emitter Type 'Box' registered
+09:18:55: Particle Emitter Type 'Ellipsoid' registered
+09:18:55: Particle Emitter Type 'Cylinder' registered
+09:18:55: Particle Emitter Type 'Ring' registered
+09:18:55: Particle Emitter Type 'HollowEllipsoid' registered
+09:18:55: Particle Affector Type 'LinearForce' registered
+09:18:55: Particle Affector Type 'ColourFader' registered
+09:18:55: Particle Affector Type 'ColourFader2' registered
+09:18:55: Particle Affector Type 'ColourImage' registered
+09:18:55: Particle Affector Type 'ColourInterpolator' registered
+09:18:55: Particle Affector Type 'Scaler' registered
+09:18:55: Particle Affector Type 'Rotator' registered
+09:18:55: Particle Affector Type 'DirectionRandomiser' registered
+09:18:55: Particle Affector Type 'DeflectorPlane' registered
+09:18:55: Plugin successfully installed
+09:18:55: Loading library .\Plugin_BSPSceneManager
+09:18:55: Installing plugin: BSP Scene Manager
+09:18:55: Plugin successfully installed
+09:18:55: Loading library .\Plugin_OctreeSceneManager
+09:18:55: Installing plugin: Octree & Terrain Scene Manager
+09:18:55: Plugin successfully installed
+09:18:55: Loading library .\Plugin_CgProgramManager
+09:18:55: Installing plugin: Cg Program Manager
+09:18:55: Plugin successfully installed
+09:18:55: *-*-* OGRE Initialising
+09:18:55: *-*-* Version 1.6.5 (Shoggoth)
+09:18:55: Added resource location 'Media' of type 'FileSystem' to resource group 'General'
+09:18:55: Added resource location 'Media\BlackGround' of type 'FileSystem' to resource group 'General'
+09:18:55: Added resource location 'Media\Model' of type 'FileSystem' to resource group 'General'
+09:18:55: D3D9 : RenderSystem Option: Full Screen = No
+09:18:55: D3D9 : RenderSystem Option: Video Mode = 1024 x 768 @ 32-bit colour
+09:18:55: CPU Identifier & Features
+09:18:55: -------------------------
+09:18:55:  *   CPU ID: GenuineIntel: Intel(R) Pentium(R) Dual  CPU  E2180  @ 2.00GHz
+09:18:55:  *      SSE: yes
+09:18:55:  *     SSE2: yes
+09:18:55:  *     SSE3: yes
+09:18:55:  *      MMX: yes
+09:18:55:  *   MMXEXT: yes
+09:18:55:  *    3DNOW: no
+09:18:55:  * 3DNOWEXT: no
+09:18:55:  *     CMOV: yes
+09:18:55:  *      TSC: yes
+09:18:55:  *      FPU: yes
+09:18:55:  *      PRO: yes
+09:18:55:  *       HT: no
+09:18:55: -------------------------
+09:18:55: D3D9 : Subsystem Initialising
+09:18:55: ***************************************
+09:18:55: *** D3D9 : Subsystem Initialised OK ***
+09:18:55: ***************************************
+09:18:55: D3D9RenderSystem::_createRenderWindow "OgreImageSource Windows", 0x0 windowed  miscParams: externalWindowHandle=396378 
+09:18:55: D3D9 : Created D3D9 Rendering Window 'OgreImageSource Windows' : 1366x706, 32bpp
+09:18:55: D3D9 : WARNING - disabling VSync in windowed mode can cause timing issues at lower frame rates, turn VSync on if you observe this problem.
+09:18:55: Registering ResourceManager for type Texture
+09:18:55: Registering ResourceManager for type GpuProgram
+09:18:55: RenderSystem capabilities
+09:18:55: -------------------------
+09:18:55: RenderSystem Name: Direct3D9 Rendering Subsystem
+09:18:55: GPU Vendor: intel
+09:18:55: Device Name: Intel(R) G33/G31 Express Chipset Family (Microsoft Corporation - WDDM 1.0)
+09:18:55: Driver Version: 8.15.10.1749
+09:18:55:  * Fixed function pipeline: yes
+09:18:55:  * Hardware generation of mipmaps: yes
+09:18:55:  * Texture blending: yes
+09:18:55:  * Anisotropic texture filtering: yes
+09:18:55:  * Dot product texture operation: yes
+09:18:55:  * Cube mapping: yes
+09:18:55:  * Hardware stencil buffer: yes
+09:18:55:    - Stencil depth: 8
+09:18:55:    - Two sided stencil support: yes
+09:18:55:    - Wrap stencil values: yes
+09:18:55:  * Hardware vertex / index buffers: yes
+09:18:55:  * Vertex programs: yes
+09:18:55:  * Fragment programs: yes
+09:18:55:  * Geometry programs: no
+09:18:55:  * Supported Shader Profiles: hlsl ps_1_1 ps_1_2 ps_1_3 ps_1_4 ps_2_0 vs_1_1 vs_2_0 vs_2_a vs_2_x vs_3_0
+09:18:55:  * Texture Compression: yes
+09:18:55:    - DXT: yes
+09:18:55:    - VTC: no
+09:18:55:  * Scissor Rectangle: yes
+09:18:55:  * Hardware Occlusion Query: no
+09:18:55:  * User clip planes: yes
+09:18:55:  * VET_UBYTE4 vertex element type: yes
+09:18:55:  * Infinite far plane projection: yes
+09:18:55:  * Hardware render-to-texture: yes
+09:18:55:  * Floating point textures: no
+09:18:55:  * Non-power-of-two textures: yes (limited)
+09:18:55:  * Volume textures: yes
+09:18:55:  * Multiple Render Targets: 1
+09:18:55:    - With different bit depths: no
+09:18:55:  * Point Sprites: yes
+09:18:55:  * Extended point parameters: yes
+09:18:55:  * Max Point Size: 256
+09:18:55:  * Vertex texture fetch: no
+09:18:55:  * Render to Vertex Buffer : no
+09:18:55:  * DirectX per stage constants: yes
+09:18:55: ResourceBackgroundQueue - threading disabled
+09:18:55: Particle Renderer Type 'billboard' registered
+09:18:55: SceneManagerFactory for type 'BspSceneManager' registered.
+09:18:55: Registering ResourceManager for type BspLevel
+09:18:55: SceneManagerFactory for type 'OctreeSceneManager' registered.
+09:18:55: SceneManagerFactory for type 'TerrainSceneManager' registered.
+09:18:55: Parsing scripts for resource group Autodetect
+09:18:55: Finished parsing scripts for resource group Autodetect
+09:18:55: Parsing scripts for resource group General
+09:18:55: Parsing script Shaders.program
+09:18:55: Parsing script clouds.material
+09:18:55: Parsing script 1253.material
+09:18:55: Parsing script baogaoting.mesh.material
+09:18:55: Parsing script bijiben.mesh.material
+09:18:55: Parsing script qian.material
+09:18:55: Parsing script yandou.mesh.material
+09:18:55: Parsing script jiwei.mesh.material
+09:18:55: Parsing script bs1.material
+09:18:55: Parsing script Foregrou.material
+09:18:55: Parsing script zuqiu.mesh.material
+09:18:55: Parsing script guangxiagongyu.material
+09:18:55: Parsing script hs.mesh.material
+09:18:55: Parsing script cao3.mesh.material
+09:18:55: Parsing script tsg.mesh.material
+09:18:55: Parsing script canting.mesh.material
+09:18:55: Parsing script tiyiguan.mesh.material
+09:18:55: Parsing script book.mesh.material
+09:18:55: Parsing script dianhua.mesh.material
+09:18:55: Parsing script cao2.mesh.material
+09:18:55: Parsing script yizi.mesh.material
+09:18:55: Parsing script bsminfangl.material
+09:18:55: Parsing script Model.mesh.material
+09:18:55: Parsing script minfang.mesh.material
+09:18:55: Parsing script zhuozi.mesh.material
+09:18:55: Parsing script cao1.mesh.material
+09:18:55: Parsing script jiaoxuelou.mesh.material
+09:18:55: Parsing script qianz.material
+09:18:55: Parsing script qianzj.material
+09:18:55: Parsing script 40701.mesh.material
+09:18:55: Parsing script tree3.mesh.material
+09:18:55: Parsing script yhb.mesh.material
+09:18:55: Parsing script shiyanlou.mesh.material
+09:18:55: Parsing script flower3.mesh.material
+09:18:55: Parsing script zgyh.mesh.material
+09:18:55: Parsing script tree2.mesh.material
+09:18:55: Parsing script xiezitai.mesh.material
+09:18:55: Parsing script changyi2.mesh.material
+09:18:55: Parsing script flower2.mesh.material
+09:18:55: Parsing script lanqiujia.mesh.material
+09:18:55: Parsing script tree1.mesh.material
+09:18:55: Parsing script canting11.mesh.material
+09:18:55: Parsing script changyi1.mesh.material
+09:18:55: Parsing script __00113.material
+09:18:55: Parsing script dianxinl.material
+09:18:55: Parsing script flower1.mesh.material
+09:18:55: Parsing script sushelou.mesh.material
+09:18:55: Parsing script taideng.mesh.material
+09:18:55: Parsing script xingzhenglou11.mesh.material
+09:18:55: Parsing script qiany.material
+09:18:55: Parsing script Example.particle
+09:18:55: Finished parsing scripts for resource group General
+09:18:55: Parsing scripts for resource group Internal
+09:18:55: Finished parsing scripts for resource group Internal
+09:18:55: Texture: clouds.jpg: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+09:18:59: D3D9 : ***** Dimensions altered by the render system
+09:18:59: D3D9 : ***** Source image dimensions : 1024x593
+09:18:59: D3D9 : ***** Texture dimensions : 1024x1024
+09:18:59: Texture: middleschool.jpg: Loading 1 faces(PF_R8G8B8,1024x593x1) with 10 generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x1024x1.

@@ -15,6 +15,7 @@ using Mogre;
 using System.ComponentModel;
 using System.Windows.Media.Animation;
 using Esd.Tool;
+using EsdCommon;
 
 namespace Esd
 {
@@ -30,11 +31,15 @@ namespace Esd
         public Window1()
         {
             InitializeComponent();
+            /// <summary>
+            /// 工具管理类对象
+            /// </summary>
+            new ToolManage();
         }
-     
+
         private void _ogre_OnInitialised(object sender, RoutedEventArgs e)
         {
-           var   sceneMgr = _ogreImage.SceneManager;
+            var sceneMgr = _ogreImage.SceneManager;
             // Set ambient light
             sceneMgr.AmbientLight = new ColourValue(0.5f, 0.5f, 0.5f);
 
@@ -76,42 +81,87 @@ namespace Esd
         private void Window1_OnLoaded(object sender, RoutedEventArgs e)
         {
             _ogreImage.InitOgreAsync();
-              
+          /*  panel1.MouseDown += new MouseEventHandler(ToolManageObject.MouseDown);
+            panel1.MouseMove += new MouseEventHandler(ToolManageObject.MouseMove);
+            panel1.MouseUp += new MouseEventHandler(ToolManageObject.MouseUp);
+            this.KeyDown += new KeyEventHandler(ToolManageObject.KeyDown);
+            this.KeyUp += new KeyEventHandler(ToolManageObject.KeyUp);*/
+
+
         }
         private void Window1_OnClosing(object sender, CancelEventArgs e)
         {
             RenterTargetControl.Source = null;
             EsdSceneManager.Singleton.MaterialPtr = null;
             _ogreImage.Dispose();
-        }
-
-        private void OgreMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Point position = e.GetPosition(RenterTargetControl);
-
-            MessageBox.Show(position.ToString());
-        }
+        }     
 
         private void NewScene_Click(object sender, RoutedEventArgs e)
         {
             NewSceneTool tool = new NewSceneTool();
             tool.Click();
-           
-        }
 
+        }
+        #region 工具栏透视俯视旋转工具事件
         private void Viewport_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            System.Windows.Controls.Image img = sender as System.Windows.Controls.Image;
+            //img.CaptureMouse();
+            switch (img.Name)
+            {
+                case "img_down":
+                    viewporttool.MouseDown(ViewportToolEnum.ViewportDown);
+                    break;
+                case "img_up":
+                    viewporttool.MouseDown(ViewportToolEnum.ViewportUp);
+                    break;
+                case "img_left":
+                    viewporttool.MouseDown(ViewportToolEnum.ViewportLeft);
+                    break;
+                case "img_right":
+                    viewporttool.MouseDown(ViewportToolEnum.ViewportRight);
+                    break;
+            }
+            e.Handled = true;
         }
 
         private void Viewport_MouseLeave(object sender, MouseEventArgs e)
         {
-
+            //viewporttool.MouseLeave(ViewportToolEnum.None);
         }
 
         private void Viewport_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            viewporttool.MouseLeave(ViewportToolEnum.None);
+        }
+        #endregion
 
+        private void OgreMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            ToolManage.Singleton.MouseUp(sender, e);
+        }
+        private void OgreMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ToolManage.Singleton.MouseDown(sender, e);
+           /* Point position = e.GetPosition(RenterTargetControl);
+
+            MessageBox.Show(position.ToString());*/
+        }
+
+        private void OgreMouseMove(object sender, MouseEventArgs e)
+        {
+            ToolManage.Singleton.MouseMove(sender, e);
+        }
+
+        private void OgreKeyDown(object sender, KeyEventArgs e)
+        {
+            ToolManage.Singleton.KeyDown(sender, e);
+            e.Handled = true;
+        }
+
+        private void OgreKeyUp(object sender, KeyEventArgs e)
+        {
+            ToolManage.Singleton.KeyUp(sender, e);
         }
     }
 }

@@ -35,6 +35,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\Mogre.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -47,12 +53,27 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EsdCommon.cs" />
+    <Compile Include="EsdSceneManager.cs" />
+    <Compile Include="ITool.cs" />
     <Compile Include="ModelDataMaintenance.cs" />
     <Compile Include="ModelEntryStruct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolManage.cs" />
+    <Compile Include="工具\PanToolClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OgreLib\OgreLib.csproj">
+      <Project>{DBA07D28-3FDF-4F64-9CED-571FA86A8296}</Project>
+      <Name>OgreLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
