@@ -48,6 +48,18 @@ namespace EsdCommon
                 return null;
             }
         }
+        public ITool GetTool(Type t)
+        {
+            foreach (ITool tool in ToolList)
+            {
+                if (tool.GetType() == t)
+                {
+                    return tool;
+                   
+                }
+            }
+            return null;
+        }
         /// <summary>
         /// 当前工具类型
         /// </summary>

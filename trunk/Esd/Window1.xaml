@@ -48,7 +48,7 @@
                 </MenuItem>
             </Menu>
         </Border>
-        <Border Height="42" Background="SkyBlue"  BorderThickness="1" DockPanel.Dock="Top">            
+        <Border Height="42" Background="SkyBlue"  BorderThickness="1" DockPanel.Dock="Top">
             <ToolBar>
                 <Button Name="Button1"  Width="36" Height="34" >
                     <Image  Name="img_down" Source="/Esd;component/ico/tianxia_toolStripButton.Image.png"   MouseLeftButtonDown="Viewport_MouseDown"  MouseLeave="Viewport_MouseLeave" MouseLeftButtonUp="Viewport_MouseUp"  ></Image>
@@ -63,13 +63,13 @@
                     <Image  Name="img_right" Source="/Esd;component/ico/youzuan_toolStripButton.Image.png" MouseLeftButtonDown="Viewport_MouseDown"  MouseLeave="Viewport_MouseLeave" MouseLeftButtonUp="Viewport_MouseUp"  ></Image>
                 </Button>
                 <Button Name="Button5"  Width="36" Height="34" >
-                    <Image  Source="/Esd;component/ico/manyou_toolStripButton.Image.png" ></Image>
+                    <Image  Source="/Esd;component/ico/manyou_toolStripButton.Image.png" MouseDown="Image_MouseDown_1" ></Image>
                 </Button>
                 <Button Name="Button6"  Width="36" Height="34" >
                     <Image  Source="/Esd;component/ico/toolStripButton12.Image.png" MouseDown="Image_MouseDown"></Image>
                 </Button>
                 <Button Name="Button7"  Width="36" Height="34" >
-                    <Image  Source="/Esd;component/ico/toolStripButton13.Image.png"></Image>
+                    <Image  Source="/Esd;component/ico/toolStripButton13.Image.png" MouseDown="Image_MouseDown_2"></Image>
                 </Button>
                 <Button Name="Button8"  Width="36" Height="34" >
                     <Image  Source="/Esd;component/ico/toolStripButton14.Image.png"></Image>
@@ -78,10 +78,10 @@
                     <Image  Source="/Esd;component/ico/toolStripButton15.Image.png"></Image>
                 </Button>
                 <Button Name="Button10"  Width="36" Height="34" >
-                    <Image  Source="/Esd;component/ico/toolStripButton1.Image.png"></Image>
+                    <Image  Source="/Esd;component/ico/toolStripButton1.Image.png" MouseDown="Image_MouseDown_3"></Image>
                 </Button>
                 <Button Name="Button11"  Width="36" Height="34" >
-                    <Image  Source="/Esd;component/ico/toolStripButton2.Image.png"></Image>
+                    <Image  Source="/Esd;component/ico/toolStripButton2.Image.png" MouseDown="Image_MouseDown_4"></Image>
                 </Button>
                 <Button Name="Button12"  Width="36" Height="34" >
                     <Image  Source="/Esd;component/ico/toolStripButton3.Image.png"></Image>
@@ -99,9 +99,11 @@
         </Border>
         <Border Width="300"  BorderThickness="1" DockPanel.Dock="Right" Name="leftorder">
             <TabControl>
-                <TabItem Header="模型" Name="tabItem1">
-                    <WrapPanel Name="moxingwrappanel">
-                    </WrapPanel>
+                <TabItem Header="模型" Name="tabItem1"  >
+                    <ScrollViewer  VerticalScrollBarVisibility="Auto">
+                        <StackPanel Name="moxingwrappanel"    >
+                        </StackPanel>
+                    </ScrollViewer>
                 </TabItem>
                 <TabItem Header="属性" Name="tabItem2">
                     <Grid />
@@ -112,16 +114,16 @@
             </TabControl>
         </Border>
         <Border Background="White" BorderBrush="Black" BorderThickness="1">
-             <Image x:Name="RenterTargetControl" Stretch="Fill"
+            <Image x:Name="RenterTargetControl" Stretch="Fill"
                    SizeChanged="RenterTargetControl_SizeChanged" MouseDown="OgreMouseDown"  MouseUp="OgreMouseUp" MouseMove="OgreMouseMove"
                  >
-        <Image.Source>
-            <OgreLib:OgreImage x:Name="_ogreImage"
+                <Image.Source>
+                    <OgreLib:OgreImage x:Name="_ogreImage"
                                        Initialised="_ogre_OnInitialised" PreRender="_image_PreRender"   />
-        </Image.Source>
-    </Image>
-            
-        </Border>        
+                </Image.Source>
+            </Image>
+
+        </Border>
     </DockPanel>
 
 </Window>

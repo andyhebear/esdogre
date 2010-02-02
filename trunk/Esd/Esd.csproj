@@ -68,6 +68,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="窗体\AddbillBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="窗体\AddModelForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="窗体\NewScene.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,8 +103,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="工具\AddBillBoardTool.cs" />
+    <Compile Include="工具\AddModelTool.cs" />
+    <Compile Include="工具\AddWaterTool.cs" />
     <Compile Include="工具\NewSceneTool.cs" />
     <Compile Include="工具\ViewportTool.cs" />
+    <Compile Include="窗体\AddbillBoard.xaml.cs">
+      <DependentUpon>AddbillBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="窗体\AddModelForm.xaml.cs">
+      <DependentUpon>AddModelForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="窗体\NewScene.xaml.cs">
       <DependentUpon>NewScene.xaml</DependentUpon>
     </Compile>

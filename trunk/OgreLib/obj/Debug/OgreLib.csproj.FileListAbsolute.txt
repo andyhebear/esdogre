@@ -15,3 +15,8 @@ F:\dotnet proj\Esd\temp\bin\OgreLib.pdb
 F:\dotnet proj\Esd\temp\OgreLib\obj\Debug\ResolveAssemblyReference.cache
 F:\dotnet proj\Esd\temp\OgreLib\obj\Debug\OgreLib.dll
 F:\dotnet proj\Esd\temp\OgreLib\obj\Debug\OgreLib.pdb
+F:\newogre\code\esdogre\bin\OgreLib.dll
+F:\newogre\code\esdogre\bin\OgreLib.pdb
+F:\newogre\code\esdogre\OgreLib\obj\Debug\ResolveAssemblyReference.cache
+F:\newogre\code\esdogre\OgreLib\obj\Debug\OgreLib.dll
+F:\newogre\code\esdogre\OgreLib\obj\Debug\OgreLib.pdb
