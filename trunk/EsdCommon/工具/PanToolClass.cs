@@ -144,7 +144,8 @@ namespace EsdCommon.Tool
             if (MouseDownPtTemp.X == temppoint.X && MouseDownPtTemp.Y == temppoint.Y && e.LeftButton == MouseButtonState.Pressed && PeopleChecked)
             {
                 Vector3 v1 = ogreimage.ScreenPtToSpaceVector(temppoint);
-                ogreimage.deslocate = new PointF(v1.x, v1.y);
+                esmanager.Deslocate = new Point(v1.x, v1.y);
+                //ogreimage.deslocate = new PointF(v1.x, v1.y);
             }
         }
         public override void KeyDown(object sender, KeyEventArgs e)
@@ -153,16 +154,17 @@ namespace EsdCommon.Tool
             {
                 Vector3 autopanvertor3 = new Vector3();
                 //得到当前摄像机的位置，
-                Vector3 position = ogreimage.camera.Position;
-                Vector3 lockat = ogreimage.LockAt;
-                switch (e.KeyData)
+                Vector3 position = ogreimage.Camera.Position;
+                Vector3 lockat = ogreimage.LockAt;               
+
+                switch (e.Key)
                 {
-                    case Keys.W:
+                    case Key.W:
                         {
                             autopanvertor3 = lockat - position;
                         }
                         break;
-                    case Keys.A:
+                    case Key.A:
                         {
                             autopanvertor3 = lockat - position;
                             float xx = 90 * (float)(System.Math.PI / 180);
@@ -171,12 +173,12 @@ namespace EsdCommon.Tool
                             autopanvertor3 = q * autopanvertor3;
                         }
                         break;
-                    case Keys.S:
+                    case Key.S:
                         {
                             autopanvertor3 = position - lockat;
                         }
                         break;
-                    case Keys.D:
+                    case Key.D:
                         {
                             autopanvertor3 = lockat - position;
                             float xx = -90 * (float)(System.Math.PI / 180);
@@ -188,43 +190,44 @@ namespace EsdCommon.Tool
                     default:
                         return;
                 }
-                ogreimage.animFlag = true;
-                ogreimage.animState.Enabled = true;
-                Vector3 v1 = ogreimage.GetPointOnLine(lockat, autopanvertor3.x, autopanvertor3.y, 0, 0.5f);
-                Vector3 v2 = ogreimage.GetPointOnLine(position, autopanvertor3.x, autopanvertor3.y, 0, 0.5f);
 
-                Vector3 tempv = new Vector3(OgreView.Singleton.manlocate.X, OgreView.Singleton.manlocate.Y, 0);
+                esmanager.animFlag = true;
+                esmanager.animState.Enabled = true;
+                Vector3 v1 = esmanager.GetPointOnLine(lockat, autopanvertor3.x, autopanvertor3.y, 0, 0.5f);
+                Vector3 v2 = esmanager.GetPointOnLine(position, autopanvertor3.x, autopanvertor3.y, 0, 0.5f);
 
-                Vector3 v3 = OgreView.Singleton.GetPointOnLine(tempv, autopanvertor3.x, autopanvertor3.y, 0, 0.5f);
+                Vector3 tempv = new Vector3((float)esmanager.manlocate.X, (float)esmanager.manlocate.Y, 0);
+
+                Vector3 v3 = esmanager.GetPointOnLine(tempv, autopanvertor3.x, autopanvertor3.y, 0, 0.5f);
 
                 //更新人物模型位置
-                double dis = System.Math.Sqrt((OgreView.Singleton.manlocate.X - v3.x) * (OgreView.Singleton.manlocate.X - v3.x) + (OgreView.Singleton.manlocate.Y - v3.y) * (OgreView.Singleton.manlocate.Y - v3.y));
+                double dis = System.Math.Sqrt((esmanager.manlocate.X - v3.x) * (esmanager.manlocate.X - v3.x) + (esmanager.manlocate.Y - v3.y) * (esmanager.manlocate.Y - v3.y));
 
-                float angle = OgreView.Singleton.GetManAngle(new PointF(v3.x, v3.y), OgreView.Singleton.manlocate, 0.5f);
+                float angle = esmanager.GetManAngle(new Point(v3.x, v3.y), esmanager.manlocate, 0.5f);
 
-                Quaternion y = new Quaternion(new Radian(-(float)OgreView.Singleton.CamerRoateDegree), Vector3.UNIT_Z);
+                Quaternion y = new Quaternion(new Radian(-(float)ogreimage.CamerRoateDegree), Vector3.UNIT_Z);
                 float xxx = 90 * (float)(System.Math.PI / 180);
                 Quaternion x = new Quaternion(new Radian(xxx), Vector3.UNIT_X);
 
-                OgreView.Singleton.animNode.Orientation = y * x;
-                OgreView.Singleton.animNode.Position = v1;
-                OgreView.Singleton.manlocate.X = v1.x;
-                OgreView.Singleton.manlocate.Y = v1.y;
-                OgreView.Singleton.dpt = new PointF(v1.x, v1.y);
+                esmanager.animNode.Orientation = y * x;
+                esmanager.animNode.Position = v1;
+                esmanager.manlocate.X = v1.x;
+                esmanager.manlocate.Y = v1.y;
+                esmanager.dpt = new Point(v1.x, v1.y);
                 //更新摄像机的位置
-                OgreView.Singleton.camera.Position = v2;
-                OgreView.Singleton.LockAt = v1;
+                ogreimage.Camera.Position = v2;
+                ogreimage.LockAt = v1;
                 //OgreView.Singleton.animNode.Position = new Vector3(v1.x, v1.y, 0);
                 //OgreView.Singleton.deslocate = new PointF(v1.x, v1.y);
                 //更新摄像机
-                OgreView.Singleton.UpdataCamera();
+                ogreimage.UpdataCamera();
             }
         }
 
         public override void KeyUp(object sender, KeyEventArgs e)
         {
-            OgreView.Singleton.animFlag = false;
-            OgreView.Singleton.animState.Enabled = false;
+            esmanager.animFlag = false;
+            esmanager.animState.Enabled = false;
         }
         //定时器，每隔一段执行的方法
         public override void TimerTick(object sender, EventArgs e)
@@ -239,19 +242,19 @@ namespace EsdCommon.Tool
         public void AutoMoveCamera()
         {
             //得到摄像机的高度，以便计算自动漫游的步长
-            float d = OgreView.Singleton.CamerDistanceLock * 0.015f;
+            float d = ogreimage.CamerDistanceLock * 0.015f;
             //根据自动漫游的方向，移动一定的距离，距离为d
-            Vector3 v1 = OgreView.Singleton.GetPointOnLine(OgreView.Singleton.LockAt, autopanvertor3.x, autopanvertor3.y, autopanvertor3.z, d);
+            Vector3 v1 = esmanager.GetPointOnLine(ogreimage.LockAt, autopanvertor3.x, autopanvertor3.y, autopanvertor3.z, d);
             //更新摄像机位置
-            float offsetx = OgreView.Singleton.LockAt.x - v1.x;
-            float offsety = OgreView.Singleton.LockAt.y - v1.y;
-            Vector3 position = OgreView.Singleton.camera.Position;
+            float offsetx = ogreimage.LockAt.x - v1.x;
+            float offsety = ogreimage.LockAt.y - v1.y;
+            Vector3 position = ogreimage.Camera.Position;
             position.x -= offsetx;
             position.y -= offsety;
-            OgreView.Singleton.camera.Position = position;
+            ogreimage.Camera.Position = position;
             //更新所看方向位置
-            OgreView.Singleton.LockAt = v1;
-            OgreView.Singleton.UpdataCamera();
+            ogreimage.LockAt = v1;
+            ogreimage.UpdataCamera();
 
         }
         //停止自动漫游

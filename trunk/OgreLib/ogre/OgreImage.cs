@@ -585,6 +585,18 @@ namespace OgreLib
             }
             _camera.Rotate(q);
         }
-
+        /// <summary>
+        /// 复位摄像机
+        /// </summary>
+        public void RestCamer()
+        {
+            camerdistancelock = 100;
+            lockat = new Vector3(0, 0, 0);
+            camerlookdowndegree = System.Math.PI / 4;
+            camerroatedegree = 0;
+            Camera.Position = new Vector3(0, 0, CamerDistanceLock);
+            Camera.LookAt(lockat);
+            UpdataCamera();
+        }
     }
 }
