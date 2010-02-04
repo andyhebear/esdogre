@@ -1,0 +1,19 @@
+﻿<Window x:Class="Esd.AddModelForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="模型属性" Height="339" Width="366">
+    <Grid>
+        <Label Height="28" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="63">名称：</Label>
+        <Label Height="28" HorizontalAlignment="Left" Margin="12,46,0,0" Name="label2" VerticalAlignment="Top" Width="63">介绍：</Label>
+        <Label HorizontalAlignment="Left" Margin="12,0,0,95" Name="label3" Width="63" Height="28" VerticalAlignment="Bottom">图片：</Label>
+        <Label Height="28" HorizontalAlignment="Left" Margin="12,0,0,61" Name="label4" VerticalAlignment="Bottom" Width="63">视频：</Label>
+        <TextBox Height="23" Margin="63,12,66,0" Name="name_textBox" VerticalAlignment="Top" />
+        <TextBox Margin="63,46,66,129" Name="remark_textBox" />
+        <TextBox Height="23" Margin="63,0,66,100" Name="picture_textBox" VerticalAlignment="Bottom" TextChanged="textBox3_TextChanged" />
+        <TextBox Height="23" Margin="63,0,66,66" Name="vido_textBox" VerticalAlignment="Bottom" TextChanged="vido_textBox_TextChanged" />
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,12,98" Name="button1" VerticalAlignment="Bottom" Width="48">浏览</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,12,68" Name="button2" VerticalAlignment="Bottom" Width="48">浏览</Button>
+        <Button Height="23" HorizontalAlignment="Left" Margin="180,0,0,22" Name="button3" VerticalAlignment="Bottom" Width="75" Click="button3_Click">确定</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,8,22" Name="button4" VerticalAlignment="Bottom" Width="75" Click="button4_Click">取消</Button>
+    </Grid>
+</Window>
