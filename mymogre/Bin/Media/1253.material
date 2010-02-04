@@ -1,0 +1,40 @@
+material body
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 
+			diffuse 0 0 0 
+			specular 0 0 0 10
+			emissive 0 0 0 
+
+			texture_unit 
+			{
+				texture nude01_m_25.tga
+			}
+		}
+	}
+}
+
+
+material hair_transparent
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 
+			diffuse 0 0 0 
+			specular 0 0 0 10
+			emissive 0 0 0 
+
+			texture_unit 
+			{
+				texture nude01_m_25_hair.tga
+			}
+		}
+	}
+}
+
+
