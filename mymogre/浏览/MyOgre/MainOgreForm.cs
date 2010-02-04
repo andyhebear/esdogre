@@ -9,6 +9,7 @@ using Mogre;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
+using System.Diagnostics;
 
 namespace MyOgre
 {
@@ -733,6 +734,25 @@ namespace MyOgre
         {
             AboutBox1 dlg = new AboutBox1();
             dlg.ShowDialog();
+        }
+        //进入室内场景
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Process myProcess = new Process();
+            string myDocumentsPath = Application.StartupPath;
+
+            myProcess.StartInfo.FileName = myDocumentsPath + "\\编辑器.exe";
+            //myProcess.StartInfo.Verb = "Print";
+            myProcess.StartInfo.CreateNoWindow = true;          
+            myProcess.Exited += new EventHandler(myProcess_Exited);
+            myProcess.Start();
+            this.Visible = false;
+
+        }
+
+        void myProcess_Exited(object sender, EventArgs e)
+        {
+            this.Visible = true;
         }
        
        
