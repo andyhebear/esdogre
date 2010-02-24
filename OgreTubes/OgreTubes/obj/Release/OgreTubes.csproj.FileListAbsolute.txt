@@ -1,0 +1,11 @@
+F:\newogre\OgreTubes\OgreTubes\bin\Release\OgreTubes.exe
+F:\newogre\OgreTubes\OgreTubes\bin\Release\OgreTubes.pdb
+F:\newogre\OgreTubes\OgreTubes\bin\Release\Mogre.dll
+F:\newogre\OgreTubes\OgreTubes\bin\Release\Mogre.pdb
+F:\newogre\OgreTubes\OgreTubes\obj\Release\ResolveAssemblyReference.cache
+F:\newogre\OgreTubes\OgreTubes\obj\Release\OgreTubes.exe
+F:\newogre\OgreTubes\OgreTubes\obj\Release\OgreTubes.pdb
+F:\newogre\OgreTubes\OgreTubes\bin\Release\Mogre.Demo.ExampleApplication.dll
+F:\newogre\OgreTubes\OgreTubes\bin\Release\MOIS.dll
+D:\MogreSDK\bin\Release\OgreTubes.exe
+D:\MogreSDK\bin\Release\OgreTubes.pdb
