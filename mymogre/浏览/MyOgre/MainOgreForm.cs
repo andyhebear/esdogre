@@ -737,22 +737,70 @@ namespace MyOgre
         }
         //进入室内场景
         private void toolStripButton1_Click(object sender, EventArgs e)
-        {
+        {                       
             Process myProcess = new Process();
             string myDocumentsPath = Application.StartupPath;
 
-            myProcess.StartInfo.FileName = myDocumentsPath + "\\编辑器.exe";
+            myProcess.StartInfo.FileName = myDocumentsPath + "\\myogrebsp.exe";
             //myProcess.StartInfo.Verb = "Print";
-            myProcess.StartInfo.CreateNoWindow = true;          
+            myProcess.StartInfo.CreateNoWindow = true;
+            myProcess.EnableRaisingEvents = true;
             myProcess.Exited += new EventHandler(myProcess_Exited);
             myProcess.Start();
             this.Visible = false;
+        }
+        public void inbspscene(string bspname)
+        {
+            switch (bspname)
+            {
+                case "场景1":
+                    bspname = Application.StartupPath + "\\bsp1.cfg";
+                    break;
+                case "场景2":
+                    bspname = Application.StartupPath + "\\bsp2.cfg";
+                    break;
+                case "场景3":
+                    bspname = Application.StartupPath + "\\bsp3.cfg";
+                    break;
+                case "场景4":
+                    bspname = Application.StartupPath + "\\bsp4.cfg";
+                    break;
+                default:
+                    bspname = Application.StartupPath + "\\bsp1.cfg";
+                    break;
 
+            }
+
+            Process myProcess = new Process();
+            string myDocumentsPath = Application.StartupPath;
+
+            myProcess.StartInfo.FileName = myDocumentsPath + "\\myogrebsp.exe ";
+            //myProcess.StartInfo.Verb = "Print";
+            myProcess.StartInfo.CreateNoWindow = true;
+            myProcess.StartInfo.Arguments = bspname;
+            myProcess.EnableRaisingEvents = true;
+            myProcess.Exited += new EventHandler(myProcess_Exited);
+            myProcess.Start();
+            this.Visible = false;
         }
 
         void myProcess_Exited(object sender, EventArgs e)
         {
-            this.Visible = true;
+            Hideform();
+        }
+        delegate void HideformCallback();
+
+        void Hideform()
+        {
+            if (this.InvokeRequired)
+            {
+                HideformCallback hide=new HideformCallback(Hideform);
+                this.Invoke(hide);
+            }
+            else
+            {
+                this.Visible = true;
+            } 
         }
        
        

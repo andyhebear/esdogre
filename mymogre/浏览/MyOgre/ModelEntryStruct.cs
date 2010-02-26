@@ -23,6 +23,10 @@ namespace MyOgre
         public byte[] 图片;
         public string 视频名称;
         public byte[] 视频;
+        /// <summary>
+        /// 室内场景名称
+        /// </summary>
+        public string BspName;
     }
     /// <summary>
     /// 注记结构，即广告牌

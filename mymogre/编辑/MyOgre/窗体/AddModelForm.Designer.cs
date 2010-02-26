@@ -41,6 +41,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.bsp_comboBox = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -133,7 +135,7 @@
             // button3
             // 
             this.button3.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button3.Location = new System.Drawing.Point(144, 202);
+            this.button3.Location = new System.Drawing.Point(144, 215);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 9;
@@ -143,7 +145,7 @@
             // button4
             // 
             this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button4.Location = new System.Drawing.Point(225, 202);
+            this.button4.Location = new System.Drawing.Point(225, 215);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 10;
@@ -154,11 +156,35 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // bsp_comboBox
+            // 
+            this.bsp_comboBox.FormattingEnabled = true;
+            this.bsp_comboBox.Items.AddRange(new object[] {
+            "场景1",
+            "场景2",
+            "场景3",
+            "场景4"});
+            this.bsp_comboBox.Location = new System.Drawing.Point(85, 188);
+            this.bsp_comboBox.Name = "bsp_comboBox";
+            this.bsp_comboBox.Size = new System.Drawing.Size(215, 20);
+            this.bsp_comboBox.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 191);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 12);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "室内场景:";
+            // 
             // AddModelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 240);
+            this.ClientSize = new System.Drawing.Size(363, 253);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.bsp_comboBox);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.vido_textBox);
@@ -195,5 +221,7 @@
         public System.Windows.Forms.TextBox picture_textBox;
         public System.Windows.Forms.TextBox vido_textBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.ComboBox bsp_comboBox;
     }
 }

@@ -148,6 +148,7 @@ namespace MyOgre
                         reader.Close();
                         file.Close();
                     }
+                    mm.BspName = dlg.bsp_comboBox.Text;
                 }
                 //更新模型的旋转角度，因为旋转是用四元素做。通过节点得不到饶某个轴旋转的角度。所以在这单独记下，
                 MainOgreForm.Singleton.ModelDataManage.UpdateModelState(node, 'x', xx);

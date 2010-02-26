@@ -1,0 +1,5 @@
+F:\newogre\code\mymogre\BSP\MyOgreBsp\obj\Release\ResolveAssemblyReference.cache
+F:\newogre\code\mymogre\Bin\MyOgreBsp.exe
+F:\newogre\code\mymogre\Bin\MyOgreBsp.pdb
+F:\newogre\code\mymogre\BSP\MyOgreBsp\obj\Release\MyOgreBsp.exe
+F:\newogre\code\mymogre\BSP\MyOgreBsp\obj\Release\MyOgreBsp.pdb

@@ -192,12 +192,22 @@ namespace MyOgre
 
                 OgreView.Singleton.animNode.Orientation = y * x;
                 OgreView.Singleton.animNode.Position = v1;
-                if (IntersectsModel(OgreView.Singleton.animNode))
-                {
+                SceneNode internode=null;
+                if (IntersectsModel(OgreView.Singleton.animNode,out internode))
+                {                   
                     Vector3 v44 = OgreView.Singleton.GetPointOnLine(lockat, autopanvertor3.x, autopanvertor3.y, 0, 1.5f);
                     OgreView.Singleton.animNode.Orientation = tempquater;
                     OgreView.Singleton.animNode.Position = v44;
                     OgreView.Singleton.UpdataCamera();
+                    ModelEntryStruct mes = MainOgreForm.Singleton.ModelDataManage.modelEntry.GetModelEntry(internode);
+
+                    if (!string.IsNullOrEmpty(mes.BspName))
+                    {
+                        if (MessageBox.Show("是否进入室内场景?", "室内场景", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                        {
+                            MainOgreForm.Singleton.inbspscene(mes.BspName);
+                        }
+                    }
                     return;
 
                     /*  OgreView.Singleton.manlocate.X = tempmanlocate.X;
@@ -234,8 +244,9 @@ namespace MyOgre
 
             }
         }
-        private bool IntersectsModel(SceneNode nodebb)
+        private bool IntersectsModel(SceneNode nodebb,out SceneNode nd)
         {
+            nd = null;
             AxisAlignedBox box = nodebb._getWorldAABB();
             //循环得到每个模型，和射线进行比较，得到和射线相交并且距屏幕最近的模型
             foreach (SceneNode node in OgreView.Singleton.mainNode.GetChildIterator())
@@ -244,6 +255,7 @@ namespace MyOgre
                 AxisAlignedBox aa = node._getWorldAABB();
                 if (box.Intersects(aa))
                 {
+                    nd = node;
                     return true;
                 }
             }
