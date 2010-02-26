@@ -38,7 +38,7 @@ namespace MyOgre
                 Quaternion y = new Quaternion(new Radian(angle), Vector3.UNIT_Z);
                 float xx = 90 * (float)(System.Math.PI / 180);
                 Quaternion x = new Quaternion(new Radian(xx), Vector3.UNIT_X);
-
+                x *= new Quaternion(new Radian(180 * (float)(System.Math.PI / 180)), Vector3.UNIT_Y);
                 animNode.Orientation = y * x;
             }
         }
@@ -699,16 +699,17 @@ namespace MyOgre
             // Setup animation default
             Animation.DefaultInterpolationMode = Animation.InterpolationMode.IM_LINEAR;
             Animation.DefaultRotationInterpolationMode = Animation.RotationInterpolationMode.RIM_LINEAR;
-            animEntry = sceneMgr.CreateEntity("robot11", "ninja.mesh");
+            animEntry = sceneMgr.CreateEntity("robot11", "man.mesh");
 
             float xx = 90 * (float)(System.Math.PI / 180);
             Quaternion x = new Quaternion(new Radian(xx), Vector3.UNIT_X);
+            x *= new Quaternion(new Radian(180 * (float)(System.Math.PI / 180)), Vector3.UNIT_Y);
 
-
-            animNode = sceneMgr.RootSceneNode.CreateChildSceneNode(new Vector3(0, 0, 0));
-            animNode.Scale(0.03f, 0.03f, 0.03f);
+            animNode = sceneMgr.RootSceneNode.CreateChildSceneNode(new Vector3(0, 0, 3));
+            animNode.Scale(0.15f, 0.15f, 0.15f);
+            
             animNode.Orientation *= x;
-            animState = animEntry.GetAnimationState("Walk");
+            animState = animEntry.GetAnimationState("marcheAvant");
             animState.Enabled = false;
         }
 
@@ -729,9 +730,11 @@ namespace MyOgre
             {
                 Vector3 v3 = OgreView.Singleton.GetPointOnLine(vvv, autopanvertor3.x, autopanvertor3.y, autopanvertor3.z, 0.5f);
                 Vector3 tempanimnodeps = animNode.Position;
+               
                 animNode.Position = v3;
                 if (IntersectsModel(animNode))
                 {
+                    tempanimnodeps.z = 3;
                     animNode.Position = tempanimnodeps;
                     //deslocate = new PointF(tempanimnodeps.x, tempanimnodeps.y); ;
                    // animState.Enabled = false;
@@ -744,8 +747,9 @@ namespace MyOgre
 
                 manlocate.X = v1.x;
                 manlocate.Y = v1.y;
-
+                v1.z = 3; 
                 animNode.Position = v1;
+               
                 movestep--;
                 return true;
             }

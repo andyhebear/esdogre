@@ -473,6 +473,35 @@ namespace MyOgre
                             OgreView.Singleton.CurrentOperateNode.Position = qq;
                         }
                         break;
+                    case 15:
+                        {
+                            OgreView.Singleton.CurrentOperateNode.Scale(1.1f, 1f, 1f);
+                        }
+                        break;
+                    case 16:
+                        {
+                            OgreView.Singleton.CurrentOperateNode.Scale(0.9f, 1f, 1f);
+                        }
+                        break;
+                    case 17:
+                        {
+                            OgreView.Singleton.CurrentOperateNode.Scale(1f, 1.1f, 1f);
+                        }
+                        break;
+                    case 18:
+                        {
+                            OgreView.Singleton.CurrentOperateNode.Scale(1f, 0.9f, 1f);
+                        }
+                        break;
+                    case 19:
+                        {OgreView.Singleton.CurrentOperateNode.Scale(1f, 1f, 1.1f);
+                        }
+                        break;
+                    case 20:
+                        {
+                            OgreView.Singleton.CurrentOperateNode.Scale(1f, 1f, 0.9f);
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -1053,6 +1082,24 @@ namespace MyOgre
                     break;
                 case "zsub_toolStripButton":
                     modeloptionflag = 14;
+                    break;
+                case "xmax_toolStripButton":
+                    modeloptionflag = 15;
+                    break;
+                case "xmin_toolStripButton":
+                    modeloptionflag = 16;
+                    break;
+                case "ymax_toolStripButton":
+                    modeloptionflag = 17;
+                    break;
+                case "ymin_toolStripButton":
+                    modeloptionflag = 18;
+                    break;
+                case "zmax_toolStripButton":
+                    modeloptionflag = 19;
+                    break;
+                case "zmin_toolStripButton":
+                    modeloptionflag = 20;
                     break;
                 default:
                     break;

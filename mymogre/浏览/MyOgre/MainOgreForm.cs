@@ -96,12 +96,12 @@ namespace MyOgre
             this.KeyUp += new KeyEventHandler(ToolManageObject.KeyUp);
 
             this.MouseWheel += new MouseEventHandler(MainForm_MouseWheel);
-           // listView1.MouseWheel += new MouseEventHandler(MainForm_MouseWheel);
+            // listView1.MouseWheel += new MouseEventHandler(MainForm_MouseWheel);
             treeView1.MouseWheel += new MouseEventHandler(MainForm_MouseWheel);
-          
+
             //打开场景文件
             MenuTool.Add(new OpenScene(open_item));
-           
+
 
             //向工具管理器增加工具
             //漫游工具
@@ -123,7 +123,7 @@ namespace MyOgre
             //采用定时器渲染场景
             timer1.Enabled = true;
             //载入模型分组数据
-           // OpenModelGroup();
+            // OpenModelGroup();
             //将模型库中的模型加开到模型列表
             //LoadAllModel();
 
@@ -139,7 +139,7 @@ namespace MyOgre
             //载入模型文件夹文件名
             LoadModelFiles();
         }
-      
+
 
         private void 删除模型ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -159,7 +159,7 @@ namespace MyOgre
         {
             ToolManageObject.TimerTick(sender, e);
 
-          
+
 
             switch (tooloperateflag)
             {
@@ -186,8 +186,8 @@ namespace MyOgre
             if (toolStripMenuItem_sun.Checked)
             {
                 //太阳
-                OgreView.Singleton.sunNode.Rotate(Vector3.UNIT_Y, new Degree(0.5f));
-               
+                OgreView.Singleton.sunNode.Rotate(Vector3.UNIT_Y, new Degree(2f));
+
             }
 
             MogreWin.RenderView();
@@ -225,7 +225,7 @@ namespace MyOgre
         {
             namecount++;
             return string.Format("{0}{1}{2}{3}{4}{5}{6}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second, namecount);
-           
+
         }
         //移动
         private void move_item_Click(object sender, EventArgs e)
@@ -276,13 +276,13 @@ namespace MyOgre
             if (modelentry == null)
                 return;
 
-          
+
 
             TextBox textbox = sender as TextBox;
             if (textbox.Text == "")
                 return;
 
-            
+
             if (textbox.Name.Equals("modelname_textBox"))
             {
                 modelentry.名称 = textbox.Text;
@@ -387,10 +387,10 @@ namespace MyOgre
         //当编辑框的上下按钮值改变时，响应的事件
         private void scalex_vScrollBar_Scroll(object sender, ScrollEventArgs e)
         {
-           
+
         }
 
-       
+
         #region 工具栏的操作，俯视，透视
         private void tooli_toolStripButton_MouseDown(object sender, MouseEventArgs e)
         {
@@ -436,7 +436,7 @@ namespace MyOgre
         private void snowToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripMenuItem_snow.Checked = !toolStripMenuItem_snow.Checked;
-            MogreWin.ShowSnow(toolStripMenuItem_snow.Checked);            
+            MogreWin.ShowSnow(toolStripMenuItem_snow.Checked);
         }
         /// <summary>
         /// 雨效果开关
@@ -508,7 +508,7 @@ namespace MyOgre
             OgreView.Singleton.floorNode = null;
             OgreView.Singleton.addmodelNode = null;
             OgreView.Singleton.mainNode = null;
-            OgreView.Singleton.billNode = null;           
+            OgreView.Singleton.billNode = null;
             OgreView.Singleton.CreateWindows((uint)panel1.Width, (uint)panel1.Height);
             ToolManageObject.InitTool();
             ToolManageObject.ToolType = typeof(PanToolClass);
@@ -517,7 +517,10 @@ namespace MyOgre
         public void AddNodeTree(ModelEntryStruct entry)
         {
             TreeNode node = new TreeNode();
-            node.Text = entry.名称;
+            if (string.IsNullOrEmpty(entry.名称))
+                node.Text = entry.实体名;
+            else
+                node.Text = entry.名称;
             node.Name = entry.实体名;
             treeView1.Nodes[0].Nodes.Add(node);
         }
@@ -663,7 +666,7 @@ namespace MyOgre
                 MainOgreForm.Singleton.materialptr.Dispose();
                 MainOgreForm.Singleton.materialptr = null;
             }
-           // SaveModelGroup();
+            // SaveModelGroup();
         }
 
         private void 更换漫游方式ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -672,17 +675,17 @@ namespace MyOgre
             OgreView.Singleton.PanState = 更换漫游方式ToolStripMenuItem.Checked;
             if (OgreView.Singleton.PanState)
             {
-               // manToolStripMenuItem.Checked = true;
+                // manToolStripMenuItem.Checked = true;
                 MogreWin.ShowMan(true);
                 //更新角度
-               // OgreView.Singleton.CamerRoateDegree = System.Math.PI / 90 ;
+                // OgreView.Singleton.CamerRoateDegree = System.Math.PI / 90 ;
                 //将摄像机位置设到模型的位置
                 OgreView.Singleton.SetWADS();
 
                 OgreView.Singleton.CamerDistanceLock = 20;
-                OgreView.Singleton.CamerLookdownDegree =System.Math.PI/180*16 ;
+                OgreView.Singleton.CamerLookdownDegree = System.Math.PI / 180 * 16;
                 OgreView.Singleton.UpdataCamera();
-              
+
             }
 
         }
@@ -737,7 +740,7 @@ namespace MyOgre
         }
         //进入室内场景
         private void toolStripButton1_Click(object sender, EventArgs e)
-        {                       
+        {
             Process myProcess = new Process();
             string myDocumentsPath = Application.StartupPath;
 
@@ -794,16 +797,16 @@ namespace MyOgre
         {
             if (this.InvokeRequired)
             {
-                HideformCallback hide=new HideformCallback(Hideform);
+                HideformCallback hide = new HideformCallback(Hideform);
                 this.Invoke(hide);
             }
             else
             {
                 this.Visible = true;
-            } 
+            }
         }
-       
-       
+
+
 
     }
 }

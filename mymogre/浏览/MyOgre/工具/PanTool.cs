@@ -136,6 +136,7 @@ namespace MyOgre
                 //得到当前摄像机的位置，
                 Vector3 position = OgreView.Singleton.camera.Position;
                 Vector3 lockat = OgreView.Singleton.LockAt;
+                Quaternion tempquat = new Quaternion(new Radian(0), Vector3.UNIT_Y);
                 switch (e.KeyData)
                 {
                     case Keys.W:
@@ -150,11 +151,14 @@ namespace MyOgre
                             Quaternion q = new Quaternion(new Radian(xx), Vector3.UNIT_Z);
                             autopanvertor3.z = 0;
                             autopanvertor3 = q * autopanvertor3;
+
+                            tempquat *= new Quaternion(new Radian(90 * (float)(System.Math.PI / 180)), Vector3.UNIT_Y);
                         }
                         break;
                     case Keys.S:
                         {
                             autopanvertor3 = position - lockat;
+                            tempquat *= new Quaternion(new Radian(180 * (float)(System.Math.PI / 180)), Vector3.UNIT_Y);
                         }
                         break;
                     case Keys.D:
@@ -164,6 +168,8 @@ namespace MyOgre
                             Quaternion q = new Quaternion(new Radian(xx), Vector3.UNIT_Z);
                             autopanvertor3.z = 0;
                             autopanvertor3 = q * autopanvertor3;
+
+                            tempquat *= new Quaternion(new Radian(-90 * (float)(System.Math.PI / 180)), Vector3.UNIT_Y);
                         }
                         break;
                     default:
@@ -186,11 +192,13 @@ namespace MyOgre
                 Quaternion y = new Quaternion(new Radian(-(float)OgreView.Singleton.CamerRoateDegree), Vector3.UNIT_Z);
                 float xxx = 90 * (float)(System.Math.PI / 180);
                 Quaternion x = new Quaternion(new Radian(xxx), Vector3.UNIT_X);
-
+                x *= new Quaternion(new Radian(180 * (float)(System.Math.PI / 180)), Vector3.UNIT_Y);
+                x *= tempquat;
                 Quaternion tempquater = OgreView.Singleton.animNode.Orientation;
                 Vector3 tempvv = OgreView.Singleton.animNode.Position;
 
                 OgreView.Singleton.animNode.Orientation = y * x;
+                v1.z = 3;
                 OgreView.Singleton.animNode.Position = v1;
                 SceneNode internode=null;
                 if (IntersectsModel(OgreView.Singleton.animNode,out internode))
