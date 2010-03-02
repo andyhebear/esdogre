@@ -16,7 +16,7 @@ namespace OgreHead
         public Window1()
         {
             App.Current.Exit += Current_Exit;
-
+            
             InitializeComponent();
         }
 
@@ -99,7 +99,7 @@ namespace OgreHead
         private void _ogreImage_LoadResourceEvent()
         {
             ConfigFile cf = new ConfigFile();
-            cf.Load("bsp1.cfg", "\t:=", true);
+            cf.Load(((App)App.Current).BspName, "\t:=", true);
             quakePk3 = cf.GetSetting("Pak0Location");
             quakeLevel = cf.GetSetting("Map");
 
