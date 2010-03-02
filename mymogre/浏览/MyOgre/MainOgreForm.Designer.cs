@@ -74,6 +74,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -458,10 +459,11 @@
             // 
             // remark_textBox
             // 
-            this.remark_textBox.Enabled = false;
             this.remark_textBox.Location = new System.Drawing.Point(58, 46);
             this.remark_textBox.Multiline = true;
             this.remark_textBox.Name = "remark_textBox";
+            this.remark_textBox.ReadOnly = true;
+            this.remark_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.remark_textBox.Size = new System.Drawing.Size(238, 108);
             this.remark_textBox.TabIndex = 3;
             // 
@@ -510,6 +512,11 @@
             this.treeView1.Size = new System.Drawing.Size(298, 553);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // MainOgreForm
             // 
@@ -591,6 +598,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_sun;
         public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_People;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_help;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

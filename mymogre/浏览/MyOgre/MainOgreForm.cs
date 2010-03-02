@@ -777,7 +777,7 @@ namespace MyOgre
             Process myProcess = new Process();
             string myDocumentsPath = Application.StartupPath;
 
-            myProcess.StartInfo.FileName = myDocumentsPath + "\\myogrebsp.exe ";
+            myProcess.StartInfo.FileName = myDocumentsPath + "\\ogrehead.exe ";
             //myProcess.StartInfo.Verb = "Print";
             myProcess.StartInfo.CreateNoWindow = true;
             myProcess.StartInfo.Arguments = bspname;
@@ -804,6 +804,11 @@ namespace MyOgre
             {
                 this.Visible = true;
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            
         }
 
 
