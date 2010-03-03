@@ -1307,7 +1307,10 @@ namespace MyOgre
             foreach (ModelEntryStruct entry in ModelDataManage.modelEntry.模型链表)
             {
                 TreeNode node = new TreeNode();
-                node.Text = entry.名称;
+                if (string.IsNullOrEmpty(entry.名称))
+                    node.Text = entry.实体名;
+                else
+                    node.Text = entry.名称;
                 node.Name = entry.实体名;
                 treeView1.Nodes[0].Nodes.Add(node);
             }
@@ -1368,7 +1371,10 @@ namespace MyOgre
         public void AddNodeTree(ModelEntryStruct entry)
         {
             TreeNode node = new TreeNode();
-            node.Text = entry.名称;
+            if (string.IsNullOrEmpty(entry.名称))
+                node.Text = entry.实体名;
+            else
+                node.Text = entry.名称;
             node.Name = entry.实体名;
             treeView1.Nodes[0].Nodes.Add(node);
         }
