@@ -1,0 +1,14 @@
+F:\newogre\OrgreHead\obj\Debug\ResolveAssemblyReference.cache
+F:\newogre\OrgreHead\obj\Debug\Window1.g.cs
+F:\newogre\OrgreHead\obj\Debug\App.g.cs
+F:\newogre\OrgreHead\obj\Debug\OgreHead_MarkupCompile.cache
+F:\newogre\OrgreHead\obj\Debug\Window1.baml
+F:\newogre\OrgreHead\obj\Debug\OgreHead.g.resources
+F:\newogre\OrgreHead\obj\Debug\OgreHead.csproj.GenerateResource.Cache
+F:\Release\OgreHead.exe
+F:\Release\OgreHead.pdb
+F:\newogre\OrgreHead\obj\Debug\OgreHead.exe
+F:\newogre\OrgreHead\obj\Debug\OgreHead.pdb
+F:\newogre\OrgreHead\obj\Debug\OgreDem.Properties.Resources.resources
+F:\newogre\OrgreHead\Release\OgreHead.exe
+F:\newogre\OrgreHead\Release\OgreHead.pdb

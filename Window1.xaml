@@ -1,0 +1,39 @@
+﻿<Window x:Class="OgreDem.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:OgreLib="clr-namespace:OgreLib"
+    Title="Ogre Example" Height="600" Width="800" Loaded="Window_Loaded" KeyDown="Window_KeyDown" 
+    
+    >
+    <DockPanel LastChildFill="True">
+        <Border Height="25" Background="SkyBlue" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+            <Menu Name="menu1">
+                <MenuItem Header="文件">
+                    <MenuItem Header="打开" Click="MenuItem_Click" />
+                </MenuItem>
+            </Menu>
+        </Border>
+        <Border Height="25" Background="SkyBlue" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Top">
+            <TextBlock Foreground="Black">Dock = "Top"</TextBlock>
+        </Border>
+        <Border Height="25" Background="LemonChiffon" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Bottom">
+            <TextBlock Foreground="Black">Dock = "Bottom"</TextBlock>
+        </Border>
+        <Border Width="200" Background="PaleGreen" BorderBrush="Black" BorderThickness="1" DockPanel.Dock="Left">
+            <TextBlock Foreground="Black">Dock = "Left"</TextBlock>
+        </Border>
+        <Border Background="White" BorderBrush="Black" BorderThickness="1">
+            <Image x:Name="RenterTargetControl" Stretch="Fill"
+                   SizeChanged="RenterTargetControl_SizeChanged"  MouseDown="RenterTargetControl_MouseDown"  MouseUp="RenterTargetControl_MouseUp"
+ MouseMove="RenterTargetControl_MouseMove"  >
+                <Image.Source>
+                    <OgreLib:OgreImage x:Name="_ogreImage"
+                                       Initialised="_image_InitScene" PreRender="_image_PreRender"
+                                      />
+                </Image.Source>
+            </Image>
+
+        </Border>
+    </DockPanel>
+
+</Window>
