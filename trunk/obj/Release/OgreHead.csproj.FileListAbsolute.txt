@@ -1,0 +1,16 @@
+F:\newogre\code\mymogre\OrgreHead\obj\Release\ResolveAssemblyReference.cache
+F:\newogre\code\mymogre\OrgreHead\obj\Release\App.g.cs
+F:\newogre\code\mymogre\OrgreHead\obj\Release\OgreHead_MarkupCompile.cache
+F:\newogre\code\Release\OgreHead.exe
+F:\newogre\code\Release\OgreHead.pdb
+F:\newogre\code\mymogre\OrgreHead\obj\Release\Window1.g.cs
+F:\newogre\code\mymogre\OrgreHead\obj\Release\GeneratedInternalTypeHelper.g.cs
+F:\newogre\code\mymogre\OrgreHead\obj\Release\OgreHead_MarkupCompile.lref
+F:\newogre\code\mymogre\OrgreHead\obj\Release\Window1.baml
+F:\newogre\code\mymogre\OrgreHead\obj\Release\OgreHead.g.resources
+F:\newogre\code\mymogre\OrgreHead\obj\Release\OgreHead.Properties.Resources.resources
+F:\newogre\code\mymogre\OrgreHead\obj\Release\OgreHead.csproj.GenerateResource.Cache
+F:\newogre\code\mymogre\OrgreHead\obj\Release\OgreHead.exe
+F:\newogre\code\mymogre\OrgreHead\obj\Release\OgreHead.pdb
+F:\newogre\code\mymogre\Bin\OgreHead.exe
+F:\newogre\code\mymogre\Bin\OgreHead.pdb
