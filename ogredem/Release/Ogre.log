@@ -1,0 +1,444 @@
+19:36:23: Creating resource group General
+19:36:23: Creating resource group Internal
+19:36:23: Creating resource group Autodetect
+19:36:23: SceneManagerFactory for type 'DefaultSceneManager' registered.
+19:36:23: Registering ResourceManager for type Material
+19:36:23: Registering ResourceManager for type Mesh
+19:36:23: Registering ResourceManager for type Skeleton
+19:36:23: MovableObjectFactory for type 'ParticleSystem' registered.
+19:36:23: OverlayElementFactory for type Panel registered.
+19:36:23: OverlayElementFactory for type BorderPanel registered.
+19:36:23: OverlayElementFactory for type TextArea registered.
+19:36:23: Registering ResourceManager for type Font
+19:36:23: ArchiveFactory for archive type FileSystem registered.
+19:36:23: ArchiveFactory for archive type Zip registered.
+19:36:23: FreeImage version: 3.10.0
+19:36:23: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+19:36:23: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2
+19:36:23: DDS codec registering
+19:36:23: Registering ResourceManager for type HighLevelGpuProgram
+19:36:23: Registering ResourceManager for type Compositor
+19:36:23: MovableObjectFactory for type 'Entity' registered.
+19:36:23: MovableObjectFactory for type 'Light' registered.
+19:36:23: MovableObjectFactory for type 'BillboardSet' registered.
+19:36:23: MovableObjectFactory for type 'ManualObject' registered.
+19:36:23: MovableObjectFactory for type 'BillboardChain' registered.
+19:36:23: MovableObjectFactory for type 'RibbonTrail' registered.
+19:36:23: Loading library .\RenderSystem_Direct3D9
+19:36:23: Installing plugin: D3D9 RenderSystem
+19:36:23: D3D9 : Direct3D9 Rendering Subsystem created.
+19:36:23: D3D9: Driver Detection Starts
+19:36:23: D3D9: Driver Detection Ends
+19:36:23: Plugin successfully installed
+19:36:23: Loading library .\Plugin_ParticleFX
+19:36:23: Installing plugin: ParticleFX
+19:36:23: Particle Emitter Type 'Point' registered
+19:36:23: Particle Emitter Type 'Box' registered
+19:36:23: Particle Emitter Type 'Ellipsoid' registered
+19:36:23: Particle Emitter Type 'Cylinder' registered
+19:36:23: Particle Emitter Type 'Ring' registered
+19:36:23: Particle Emitter Type 'HollowEllipsoid' registered
+19:36:23: Particle Affector Type 'LinearForce' registered
+19:36:23: Particle Affector Type 'ColourFader' registered
+19:36:23: Particle Affector Type 'ColourFader2' registered
+19:36:23: Particle Affector Type 'ColourImage' registered
+19:36:23: Particle Affector Type 'ColourInterpolator' registered
+19:36:23: Particle Affector Type 'Scaler' registered
+19:36:23: Particle Affector Type 'Rotator' registered
+19:36:23: Particle Affector Type 'DirectionRandomiser' registered
+19:36:23: Particle Affector Type 'DeflectorPlane' registered
+19:36:23: Plugin successfully installed
+19:36:23: Loading library .\Plugin_OctreeSceneManager
+19:36:23: Installing plugin: Octree & Terrain Scene Manager
+19:36:23: Plugin successfully installed
+19:36:23: Loading library .\Plugin_CgProgramManager
+19:36:23: Installing plugin: Cg Program Manager
+19:36:23: Plugin successfully installed
+19:36:23: *-*-* OGRE Initialising
+19:36:23: *-*-* Version 1.4.8 (Eihort)
+19:36:23: Creating resource group Bootstrap
+19:36:23: Added resource location 'Media/packs/OgreCore.zip' of type 'Zip' to resource group 'Bootstrap'
+19:36:23: Added resource location 'Media' of type 'FileSystem' to resource group 'General'
+19:36:23: D3D9 : RenderSystem Option: Full Screen = No
+19:36:23: D3D9 : RenderSystem Option: Video Mode = 640 x 480 @ 32-bit colour
+19:36:23: CPU Identifier & Features
+19:36:23: -------------------------
+19:36:23:  *   CPU ID: GenuineIntel: Intel(R) Pentium(R) Dual  CPU  E2180  @ 2.00GHz
+19:36:23:  *      SSE: yes
+19:36:23:  *     SSE2: yes
+19:36:23:  *     SSE3: yes
+19:36:23:  *      MMX: yes
+19:36:23:  *   MMXEXT: yes
+19:36:23:  *    3DNOW: no
+19:36:23:  * 3DNOWEXT: no
+19:36:23:  *     CMOV: yes
+19:36:23:  *      TSC: yes
+19:36:23:  *      FPU: yes
+19:36:23:  *      PRO: yes
+19:36:23:  *       HT: no
+19:36:23: -------------------------
+19:36:23: D3D9 : Subsystem Initialising
+19:36:23: ***************************************
+19:36:23: *** D3D9 : Subsystem Initialised OK ***
+19:36:23: ***************************************
+19:36:23: D3D9RenderSystem::createRenderWindow "OgreImageSource Windows", 0x0 windowed  miscParams: externalWindowHandle=1442832 
+19:36:23: D3D9 : Created D3D9 Rendering Window 'OgreImageSource Windows' : 784x562, 32bpp
+19:36:23: D3D9 : WARNING - disabling VSync in windowed mode can cause timing issues at lower frame rates, turn VSync on if you observe this problem.
+19:36:23: Registering ResourceManager for type Texture
+19:36:23: Registering ResourceManager for type GpuProgram
+19:36:23: Multiple render targets with independent bit depths supported
+19:36:23: D3D9: Vertex texture format supported - PF_FLOAT16_RGB
+19:36:23: D3D9: Vertex texture format supported - PF_FLOAT16_RGBA
+19:36:23: D3D9: Vertex texture format supported - PF_FLOAT32_RGB
+19:36:23: D3D9: Vertex texture format supported - PF_FLOAT32_RGBA
+19:36:23: D3D9: Vertex texture format supported - PF_FLOAT16_R
+19:36:23: D3D9: Vertex texture format supported - PF_FLOAT32_R
+19:36:23: D3D9: Vertex texture format supported - PF_FLOAT16_GR
+19:36:23: D3D9: Vertex texture format supported - PF_FLOAT32_GR
+19:36:23: RenderSystem capabilities
+19:36:23: -------------------------
+19:36:23:  * Hardware generation of mipmaps: yes
+19:36:23:  * Texture blending: yes
+19:36:23:  * Anisotropic texture filtering: yes
+19:36:23:  * Dot product texture operation: yes
+19:36:23:  * Cube mapping: yes
+19:36:23:  * Hardware stencil buffer: yes
+19:36:23:    - Stencil depth: 8
+19:36:23:    - Two sided stencil support: yes
+19:36:23:    - Wrap stencil values: yes
+19:36:23:  * Hardware vertex / index buffers: yes
+19:36:23:  * Vertex programs: yes
+19:36:23:    - Max vertex program version: vs_3_0
+19:36:24:  * Fragment programs: yes
+19:36:24:    - Max fragment program version: ps_3_0
+19:36:24:  * Texture Compression: yes
+19:36:24:    - DXT: yes
+19:36:24:    - VTC: no
+19:36:24:  * Scissor Rectangle: yes
+19:36:24:  * Hardware Occlusion Query: yes
+19:36:24:  * User clip planes: yes
+19:36:24:  * VET_UBYTE4 vertex element type: yes
+19:36:24:  * Infinite far plane projection: yes
+19:36:24:  * Hardware render-to-texture: yes
+19:36:24:  * Floating point textures: yes
+19:36:24:  * Non-power-of-two textures: yes
+19:36:24:  * Volume textures: yes
+19:36:24:  * Multiple Render Targets: 4
+19:36:24:  * Point Sprites: yes
+19:36:24:  * Extended point parameters: yes
+19:36:24:  * Max Point Size: 8192
+19:36:24:  * Vertex texture fetch: yes
+19:36:24:    - Max vertex textures: 4
+19:36:24:    - Vertex textures shared: no
+19:36:24: ResourceBackgroundQueue - threading disabled
+19:36:24: Particle Renderer Type 'billboard' registered
+19:36:24: SceneManagerFactory for type 'OctreeSceneManager' registered.
+19:36:24: SceneManagerFactory for type 'TerrainSceneManager' registered.
+19:36:24: Parsing scripts for resource group Autodetect
+19:36:24: Finished parsing scripts for resource group Autodetect
+19:36:24: Parsing scripts for resource group Bootstrap
+19:36:24: Parsing script OgreCore.material
+19:36:24: Parsing script OgreProfiler.material
+19:36:24: Parsing script Ogre.fontdef
+19:36:24: Parsing script OgreDebugPanel.overlay
+19:36:24: Texture: New_Ogre_Border_Center.png: Loading 1 faces(PF_A8R8G8B8,256x128x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x128x1.
+19:36:24: Texture: New_Ogre_Border.png: Loading 1 faces(PF_A8R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+19:36:24: Texture: New_Ogre_Border_Break.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,32x32x1.
+19:36:24: Font BlueHighwayusing texture size 512x512
+19:36:24: Info: Freetype returned null for character 127 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 128 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 129 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 130 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 131 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 132 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 133 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 134 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 135 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 136 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 137 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 138 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 139 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 140 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 141 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 142 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 143 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 144 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 145 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 146 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 147 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 148 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 149 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 150 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 151 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 152 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 153 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 154 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 155 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 156 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 157 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 158 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 159 in font BlueHighway
+19:36:24: Info: Freetype returned null for character 160 in font BlueHighway
+19:36:24: Texture: BlueHighwayTexture: Loading 1 faces(PF_BYTE_LA,512x512x1) with 0 generated mipmaps from Image. Internal format is PF_BYTE_LA,512x512x1.
+19:36:25: Texture: ogretext.png: Loading 1 faces(PF_A8R8G8B8,256x128x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x128x1.
+19:36:25: Parsing script OgreLoadingPanel.overlay
+19:36:25: Finished parsing scripts for resource group Bootstrap
+19:36:25: Parsing scripts for resource group General
+19:36:25: Parsing script clouds.material
+19:36:25: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource oceanHLSL_Cg.vert in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
+19:36:25: High-level program Cg/OceanVS encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource oceanHLSL_Cg.vert in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
+19:36:25: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource oceanHLSL_Cg.frag in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
+19:36:25: High-level program Cg/OceanFS encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource oceanHLSL_Cg.frag in resource group General or any other group. in ResourceGroupManager::openResource at ..\src\OgreResourceGroupManager.cpp (line 604)
+19:36:25: Finished parsing scripts for resource group General
+19:36:25: Parsing scripts for resource group Internal
+19:36:25: Finished parsing scripts for resource group Internal
+19:36:25: Texture: clouds.jpg: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+19:36:25: Creating viewport on target 'rtt/83474976', rendering from camera 'DefaultCamera', relative dimensions L: 0.00 T: 0.00 W: 1.00 H: 1.00 ZOrder: 0
+19:36:27: Render Target 'rtt/83474976' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+19:36:27: Creating viewport on target 'rtt/83484256', rendering from camera 'DefaultCamera', relative dimensions L: 0.00 T: 0.00 W: 1.00 H: 1.00 ZOrder: 0
+19:36:31: WARNING: Mesh instance 'mesh0' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh1' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh2' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh3' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh4' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh5' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh6' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh7' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh8' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh9' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh10' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh11' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh12' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh13' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh14' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh15' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh16' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh17' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh18' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh19' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh20' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh21' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh22' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh23' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh24' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh25' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh26' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh27' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:31: WARNING: Mesh instance 'mesh28' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh29' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh30' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh31' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh32' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh33' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh34' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh35' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh36' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh37' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh38' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh39' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh40' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh41' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh42' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh43' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh44' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh45' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh46' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh47' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh48' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh49' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh50' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh51' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh52' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh53' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh54' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh55' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh56' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh57' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh58' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh59' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh60' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh61' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh62' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh63' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:32: WARNING: Mesh instance 'mesh64' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh65' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh66' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh67' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh68' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh69' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh70' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh71' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh72' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh73' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh74' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh75' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh76' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh77' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh78' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh79' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh80' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh81' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh82' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh83' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh84' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh85' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh86' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh87' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh88' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh89' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh90' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh91' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh92' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh93' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh94' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh95' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:33: WARNING: Mesh instance 'mesh96' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh97' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh98' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh99' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh100' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh101' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh102' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh103' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh104' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh105' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh106' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh107' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh108' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh109' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh110' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh111' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh112' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh113' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh114' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh115' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh116' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh117' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh118' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh119' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh120' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh121' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh122' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh123' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh124' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh125' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh126' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh127' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh128' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh129' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:34: WARNING: Mesh instance 'mesh130' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh131' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh132' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh133' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh134' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh135' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh136' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh137' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh138' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh139' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh140' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh141' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh142' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh143' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh144' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh145' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh146' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh147' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh148' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh149' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh150' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh151' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh152' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh153' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh154' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh155' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh156' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh157' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh158' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh159' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:35: WARNING: Mesh instance 'mesh160' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh161' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh162' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh163' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh164' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh165' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh166' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh167' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh168' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh169' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh170' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh171' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh172' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh173' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh174' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh175' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh176' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh177' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh178' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh179' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh180' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh181' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh182' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh183' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh184' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh185' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh186' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh187' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh188' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh189' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh190' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh191' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh192' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh193' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh194' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh195' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh196' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:36: WARNING: Mesh instance 'mesh197' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh198' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh199' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh200' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh201' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh202' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh203' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh204' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh205' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh206' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh207' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh208' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh209' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh210' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh211' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh212' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh213' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh214' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: WARNING: Mesh instance 'mesh215' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+19:36:37: Texture: grass_10.jpg: Loading 1 faces(PF_R8G8B8,1024x1024x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x1024x1.
+19:36:38: Render Target 'rtt/83484256' Average FPS: 4.49305 Best FPS: 6.23632 Worst FPS: 2.74977
+19:36:38: Creating viewport on target 'rtt/84256576', rendering from camera 'DefaultCamera', relative dimensions L: 0.00 T: 0.00 W: 1.00 H: 1.00 ZOrder: 0
+19:37:08: Render Target 'rtt/84256576' Average FPS: 31.4807 Best FPS: 34.0467 Worst FPS: 27.2904
+19:37:08: *-*-* OGRE Shutdown
+19:37:08: Unregistering ResourceManager for type Compositor
+19:37:08: Unregistering ResourceManager for type Font
+19:37:08: Unregistering ResourceManager for type Skeleton
+19:37:08: Unregistering ResourceManager for type Mesh
+19:37:08: Unregistering ResourceManager for type HighLevelGpuProgram
+19:37:08: Uninstalling plugin: Cg Program Manager
+19:37:08: Plugin successfully uninstalled
+19:37:08: Unloading library .\Plugin_CgProgramManager
+19:37:08: Uninstalling plugin: Octree & Terrain Scene Manager
+19:37:08: Plugin successfully uninstalled
+19:37:08: Unloading library .\Plugin_OctreeSceneManager
+19:37:08: Uninstalling plugin: ParticleFX
+19:37:08: Plugin successfully uninstalled
+19:37:08: Unloading library .\Plugin_ParticleFX
+19:37:08: Uninstalling plugin: D3D9 RenderSystem
+19:37:08: Render Target 'OgreImageSource Windows' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+19:37:08: D3D9 : Shutting down cleanly.
+19:37:08: Unregistering ResourceManager for type Texture
+19:37:08: Unregistering ResourceManager for type GpuProgram
+19:37:08: D3D9 : Direct3D9 Rendering Subsystem destroyed.
+19:37:08: Plugin successfully uninstalled
+19:37:08: Unloading library .\RenderSystem_Direct3D9
+19:37:08: Unregistering ResourceManager for type Material
